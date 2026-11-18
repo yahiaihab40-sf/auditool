@@ -284,6 +284,809 @@ footer svg{width:34px;height:34px;flex:none}
 .top svg{width:16px;height:16px;transition:transform .35s var(--ease)}
 .top:hover svg{transform:translateY(-4px)}
 [dir="ltr"]{unicode-bidi:isolate}
+.gias{grid-column:2;justify-self:start;margin-top:6px;font:500 12px/1 var(--mono);letter-spacing:.04em;color:var(--navy-2);background:var(--sky);border-radius:5px;padding:6px 8px}
+html[lang="ar"] .gias{font-family:var(--body);letter-spacing:0;font-size:13px}
+.sector p{font-size:15px;color:var(--muted);line-height:1.5;margin-top:-12px}
+.sector h3{margin-top:auto}
+.roles{background:var(--mist);border-block:1px solid var(--line)}
+.role{display:flex;flex-direction:column;gap:12px;height:100%;padding:28px;border:1px solid var(--line);border-radius:14px;background:var(--white)}
+.role:hover{border-color:var(--blue);box-shadow:0 30px 54px -32px rgba(11,58,102,.6)}
+.who-tag{align-self:flex-start;font:600 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--navy-2);background:var(--sky);padding:7px 10px;border-radius:999px}
+html[lang="ar"] .who-tag{font-family:var(--body);letter-spacing:0;font-size:13px}
+.role h3{font-family:var(--display);font-weight:700;font-size:20px;line-height:1.25}
+.role p{color:var(--muted);font-size:16px}
+.cards>li{display:flex}.cards>li>article{flex:1}
+.photo{flex:none;width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 8px 20px -8px rgba(11,42,74,.6);transition:transform .6s var(--ease)}
+.card:hover .photo{transform:scale(1.08) rotate(-3deg)}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:0 36px;margin-top:40px}
+.controls li{display:flex;gap:16px;padding:22px 0;border-top:1px solid var(--line)}
+.controls svg{flex:none;width:40px;height:40px;padding:9px;border-radius:11px;background:var(--sky);fill:none;stroke:var(--navy-2);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:background .3s,stroke .3s,transform .5s var(--ease)}
+.controls li:hover svg{background:var(--navy-2);stroke:#fff;transform:rotate(-8deg) scale(1.08)}
+.controls strong{display:block;font-family:var(--display);font-weight:700;font-size:17px}
+.controls span{font-size:15px;color:var(--muted)}
+.deploy{margin-top:28px}
+.faq-band{background:var(--mist);border-top:1px solid var(--line)}
+.faqwrap{display:flex;flex-wrap:wrap;gap:48px}
+.faqwrap .head{flex:1 1 300px;align-self:flex-start}
+.faq{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.faq details{border:1px solid var(--line);border-radius:12px;background:var(--white);transition:border-color .3s,box-shadow .3s}
+.faq details[open]{border-color:var(--blue);box-shadow:0 20px 40px -28px rgba(11,58,102,.55)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 22px;font-family:var(--display);font-weight:700;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:12px;height:12px;border-right:2px solid var(--navy-2);border-bottom:2px solid var(--navy-2);transform:rotate(45deg) translate(-3px,-3px);transition:transform .35s var(--ease)}
+.faq details[open] summary::after{transform:rotate(225deg)}
+.faq details p{padding:0 22px 20px;color:var(--muted);animation:rise .45s var(--ease)}
+.btn.wa{align-self:flex-start;background:#1E8F4E;box-shadow:0 1px 0 #146b39,0 10px 24px -12px rgba(20,107,57,.7)}
+.btn.wa:hover{background:#177a42}
+.btn.wa svg{width:20px;height:20px}
+.btn.wa:hover svg,html[dir="rtl"] .btn.wa svg,html[dir="rtl"] .btn.wa:hover svg{transform:none}
+.next{grid-column:1/-1;font-size:15px;color:var(--navy-2);font-weight:500;margin-top:-4px}
+
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+  mark{background-size:100% 100%}
+  .tick svg{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"><i></i></div>
+<div class="glow" aria-hidden="true"></div>
+
+<header>
+<div class="wrap">
+<a class="logo" href="#top" aria-label="AUDITool">
+<svg role="img" aria-label="AUDITool" xmlns="http://www.w3.org/2000/svg" viewBox="-54.877 -61.656 334.290 116.534"><g fill="none" stroke="#0B2A4A" stroke-width="4.5" stroke-linejoin="miter" stroke-miterlimit="10"><path d="M13.093 -35.407 A37.75 37.75 0 1 0 36.581 -9.320 L-4.458 4.014 Z"/><path class="slice" d="M7.803 -7.026 L24.496 -44.529 A37.75 37.75 0 0 1 46.845 -19.708 Z"/></g><g transform="translate(72.695 15.000)" fill="#0B2A4A"><path transform="translate(0.000 0) scale(0.04267 -0.04267)" d="M20 0 303 703H414L696 0H551L502 131H212L162 0ZM458 245 358 511 256 245Z"/><path transform="translate(31.792 0) scale(0.04267 -0.04267)" d="M349 -10Q266 -10 201.5 26.5Q137 63 100.0 127.0Q63 191 63 272V703H199V268Q199 221 218.5 187.0Q238 153 272.5 134.5Q307 116 349 116Q392 116 425.0 134.5Q458 153 477.5 187.0Q497 221 497 267V703H634V271Q634 190 597.0 126.5Q560 63 496.5 26.5Q433 -10 349 -10Z"/><path transform="translate(62.774 0) scale(0.04267 -0.04267)" d="M72 0V703H346Q424 703 490.5 677.0Q557 651 606.5 603.5Q656 556 683.5 492.0Q711 428 711.0 352.0Q711 276 683.5 211.5Q656 147 607.0 99.5Q558 52 491.5 26.0Q425 0 348 0ZM208 582V121H344Q412 121 463.0 149.5Q514 178 542.5 230.0Q571 282 571 353Q571 422 542.0 473.5Q513 525 462.0 553.5Q411 582 344 582Z"/><path transform="translate(95.932 0) scale(0.04267 -0.04267)" d="M72 0V703H208V0Z"/><path transform="translate(109.161 0) scale(0.04267 -0.04267)" d="M246 0V582H22V703H607V582H383V0Z"/><path transform="translate(135.355 0) scale(0.04267 -0.04267)" d="M284 -10Q216 -10 160.5 23.0Q105 56 72.5 112.0Q40 168 40 237Q40 305 72.5 360.0Q105 415 160.5 447.5Q216 480 284 480Q353 480 408.0 448.0Q463 416 495.5 360.5Q528 305 528 237Q528 167 495.5 111.5Q463 56 408.0 23.0Q353 -10 284 -10ZM284 58Q334 58 372.5 81.0Q411 104 433.5 145.0Q456 186 456 237Q456 288 433.5 327.5Q411 367 372.5 390.0Q334 413 284 413Q235 413 196.0 390.0Q157 367 135.0 327.5Q113 288 113 237Q113 185 135.0 144.5Q157 104 196.0 81.0Q235 58 284 58Z"/><path transform="translate(160.874 0) scale(0.04267 -0.04267)" d="M284 -10Q216 -10 160.5 23.0Q105 56 72.5 112.0Q40 168 40 237Q40 305 72.5 360.0Q105 415 160.5 447.5Q216 480 284 480Q353 480 408.0 448.0Q463 416 495.5 360.5Q528 305 528 237Q528 167 495.5 111.5Q463 56 408.0 23.0Q353 -10 284 -10ZM284 58Q334 58 372.5 81.0Q411 104 433.5 145.0Q456 186 456 237Q456 288 433.5 327.5Q411 367 372.5 390.0Q334 413 284 413Q235 413 196.0 390.0Q157 367 135.0 327.5Q113 288 113 237Q113 185 135.0 144.5Q157 104 196.0 81.0Q235 58 284 58Z"/><path transform="translate(186.393 0) scale(0.04267 -0.04267)" d="M71 0V708H141V0Z"/></g></svg>
+</a>
+<nav aria-label="Primary"><ul>
+<li><a href="#platform" data-i="nav1">Platform</a></li>
+<li><a href="#sectors" data-i="nav3">Sectors</a></li>
+<li><a href="#security" data-i="nav5">Security</a></li>
+<li><a href="#expertise" data-i="nav4">Expertise</a></li>
+<li><a href="#faq" data-i="nav6">FAQ</a></li>
+</ul></nav>
+<div class="tools">
+<div class="lang" role="group" aria-label="Language" data-on="en"><i aria-hidden="true"></i><button type="button" id="lang-en" data-lang="en" aria-pressed="true" lang="en">EN</button><button type="button" id="lang-ar" data-lang="ar" aria-pressed="false" lang="ar">عربي</button></div>
+<a class="btn magnet" href="#demo" data-i="cta">Book a demo</a>
+</div>
+</div>
+</header>
+
+<main id="top">
+<section class="hero" id="hero">
+<div class="blob a" aria-hidden="true"></div><div class="blob b" aria-hidden="true"></div>
+<canvas id="net" aria-hidden="true"></canvas>
+<div class="wrap">
+<div class="hero-copy">
+<p class="eyebrow rise" data-i="eyebrow">End-to-end internal audit management · Built for Egypt</p>
+<h1 class="rise" data-i="h1">From annual plan to closed action, <mark>in one system.</mark></h1>
+<p class="lead rise" data-i="lead">AUDITool digitises and standardises the end-to-end internal audit lifecycle, from the risk-based annual plan to the closure of the last management action. A single source of truth for your audit function, in Arabic and English.</p>
+<div class="actions rise">
+<a class="btn lg magnet" href="#demo"><span data-i="cta">Book a demo</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<a class="link" href="#platform" data-i="see">See what it covers</a>
+</div>
+</div>
+<div class="scene">
+<div class="stage">
+<div class="rig" id="rig">
+<div class="floor"></div>
+<div class="stack" id="body3d" aria-hidden="true"></div>
+<div class="stack pull" id="slice3d" aria-hidden="true"></div>
+<a class="chip" href="#platform"><b>01</b><span data-i="c1">Planning</span></a>
+<a class="chip" href="#platform"><b>02</b><span data-i="c2">Risk and control</span></a>
+<a class="chip" href="#platform"><b>03</b><span data-i="c3">Fieldwork</span></a>
+<a class="chip" href="#platform"><b>04</b><span data-i="c4">Findings</span></a>
+<a class="chip" href="#platform"><b>05</b><span data-i="c5">Follow-up</span></a>
+<a class="chip" href="#platform"><b>06</b><span data-i="c6">Reporting</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="strip" aria-label="At a glance">
+<div class="wrap"><ul>
+<li class="rv"><svg aria-hidden="true" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M4 16h24M16 4c4 3.5 4 20.5 0 24M16 4c-4 3.5-4 20.5 0 24"/></svg><div><strong data-i="s1t">Arabic and English</strong><span data-i="s1d">Full right-to-left interface</span></div></li>
+<li class="rv" style="--d:.08s"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M16 4l10 4v7c0 6.5-4.3 11-10 13C10.3 26 6 21.5 6 15V8z"/><path d="M11.5 16l3.2 3.2 6-6.4"/></svg><div><strong data-i="s2t">Hosted in Egypt</strong><span data-i="s2d">Your audit data stays in the country</span></div></li>
+<li class="rv" style="--d:.16s"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M8 5h12l5 5v17H8z"/><path d="M20 5v5h5M12 16h9M12 21h9"/></svg><div><strong data-i="s3t">Global Internal Audit Standards</strong><span data-i="s3d">Built on the IIA's 2024 edition</span></div></li>
+<li class="rv" style="--d:.24s"><svg aria-hidden="true" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M16 9v7l5 3"/></svg><div><strong data-i="s4t">Live in about two weeks</strong><span data-i="s4d">Implementation included in the price</span></div></li>
+</ul></div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div>
+<ul><li data-i="t1">Risk-based planning</li><li data-i="t2">Control testing</li><li data-i="t3">Working papers</li><li data-i="t4">Audit sampling</li><li data-i="t5">Management action plans</li><li data-i="t6">Audit committee reporting</li><li data-i="t7">Global Internal Audit Standards</li><li data-i="t8">Residual risk</li></ul>
+<ul><li data-i="t1">Risk-based planning</li><li data-i="t2">Control testing</li><li data-i="t3">Working papers</li><li data-i="t4">Audit sampling</li><li data-i="t5">Management action plans</li><li data-i="t6">Audit committee reporting</li><li data-i="t7">Global Internal Audit Standards</li><li data-i="t8">Residual risk</li></ul>
+</div></div>
+
+<section class="platform band" id="platform">
+<div class="wrap">
+<div class="head rv">
+<p class="eyebrow" data-i="p_eye">The platform</p>
+<h2 data-i="p_h">The full audit lifecycle, in one integrated system.</h2>
+<p class="lead" data-i="p_p">Six stages that usually live in disconnected spreadsheets, shared folders, and email threads. AUDITool runs them as one standardised, traceable workflow, mapped to the IIA's Global Internal Audit Standards (2024).</p>
+</div>
+<div class="grid">
+<div class="cycle rv">
+<div class="pie" id="pie" aria-hidden="true"><div class="pie-rig" id="pieRig"><div class="pie-floor"></div></div></div>
+<p class="cap" id="cap" aria-live="polite"></p>
+</div>
+<ol class="mods" id="mods">
+<li class="rv"><article class="mod tilt" tabindex="0"><span class="n">01</span><h3 class="pop" data-i="m1t">Audit planning</h3><p data-i="m1d">Build a risk-based annual audit plan, scope each engagement, and allocate resources across the audit universe.</p><span class="gias" data-i="g1">GIAS · Standard 9.4</span></article></li>
+<li class="rv"><article class="mod tilt" tabindex="0"><span class="n">02</span><h3 class="pop" data-i="m2t">Risk and control assessment</h3><p data-i="m2d">Assess inherent and residual risk, and evaluate control design and operating effectiveness, consistently across every engagement.</p><span class="gias" data-i="g2">GIAS · Standard 13.2</span></article></li>
+<li class="rv"><article class="mod tilt" tabindex="0"><span class="n">03</span><h3 class="pop" data-i="m3t">Fieldwork, sampling and analytics</h3><p data-i="m3d">Execute audit programmes, draw samples, and analyse data. Every working paper and piece of evidence stays linked to its engagement, with a clear review trail.</p><span class="gias" data-i="g3">GIAS · Principle 14</span></article></li>
+<li class="rv"><article class="mod tilt" tabindex="0"><span class="n">04</span><h3 class="pop" data-i="m4t">Findings</h3><p data-i="m4d">Document each observation once, with its risk rating, root cause, owner, and agreed management action plan.</p><span class="gias" data-i="g4">GIAS · Principle 14</span></article></li>
+<li class="rv"><article class="mod tilt" tabindex="0"><span class="n">05</span><h3 class="pop" data-i="m5t">Corrective-action follow-up</h3><p data-i="m5d">Track every management action through to closure, with clear ownership, due dates, and status.</p><span class="gias" data-i="g5">GIAS · Standard 15.2</span></article></li>
+<li class="rv"><article class="mod tilt" tabindex="0"><span class="n">06</span><h3 class="pop" data-i="m6t">Reporting and dashboards</h3><p data-i="m6d">Give senior management and the audit committee real-time visibility of audit coverage, open findings, and action status.</p><span class="gias" data-i="g6">GIAS · Standard 15.1</span></article></li>
+</ol>
+</div>
+</div>
+</section>
+
+<section class="why band" id="why">
+<div class="wrap">
+<div class="head rv">
+<p class="eyebrow" data-i="w_eye">Why AUDITool</p>
+<h2 data-i="w_h">Built for how internal audit works in Egypt.</h2>
+<p class="lead" data-i="w_p">Audit functions here usually choose between spreadsheets that stop scaling and international platforms designed for other markets. AUDITool is the third option: enterprise-grade audit management, built locally.</p>
+</div>
+<ul>
+<li class="rv"><span class="tick"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><div><h3 data-i="w1t">Arabic-first, not translated</h3><p data-i="w1d">Arabic and English interfaces with a proper right-to-left layout, so every auditor works in the language they report in.</p></div></li>
+<li class="rv"><span class="tick"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><div><h3 data-i="w2t">Your Excel history comes with you</h3><p data-i="w2d">Existing plans, risk registers and findings are brought into AUDITool during implementation, so you start with your own data, not a blank system.</p></div></li>
+<li class="rv"><span class="tick"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><div><h3 data-i="w3t">Sampling and analytics built in</h3><p data-i="w3d">Draw samples and analyse data inside the engagement, so the evidence and the conclusion sit in the same file.</p></div></li>
+<li class="rv"><span class="tick"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><div><h3 data-i="w4t">One price, implementation included</h3><p data-i="w4d">Licence and implementation are quoted together, with no separate consulting project before you can start.</p></div></li>
+</ul>
+</div>
+</section>
+
+<section class="band" id="sectors">
+<div class="wrap">
+<div class="head rv">
+<p class="eyebrow" data-i="x_eye">Who it is for</p>
+<h2 data-i="x_h">For companies looking to take total control of every audit, start to finish.</h2>
+</div>
+<ul class="cards">
+<li class="rv"><article class="sector tilt"><span class="ico pop far"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></svg></span><h3 class="pop" data-i="x1">Non-banking financial institutions</h3><p data-i="x1d">Credit, collections and compliance testing for FRA-regulated activities.</p></article></li>
+<li class="rv" style="--d:.06s"><article class="sector tilt"><span class="ico pop far"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 20V10l6 4v-4l6 4V5h4v15zM7 17h2M12 17h2"/></svg></span><h3 class="pop" data-i="x2">Industrial</h3><p data-i="x2d">Procurement, inventory, production and maintenance cycles across plants.</p></article></li>
+<li class="rv" style="--d:.12s"><article class="sector tilt"><span class="ico pop far"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3c3.5 4.5 6 7.6 6 11a6 6 0 0 1-12 0c0-3.4 2.5-6.5 6-11z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></span><h3 class="pop" data-i="x3">Petroleum</h3><p data-i="x3d">Contractor spend, joint operations, HSE and asset-heavy operations.</p></article></li>
+<li class="rv" style="--d:.18s"><article class="sector tilt"><span class="ico pop far"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10L20 7H7"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg></span><h3 class="pop" data-i="x4">FMCG</h3><p data-i="x4d">Distribution networks, trade spend, stock counts and branch audits.</p></article></li>
+<li class="rv" style="--d:.24s"><article class="sector tilt"><span class="ico pop far"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 8h14M14 4l4 4-4 4M20 16H6M10 12l-4 4 4 4"/></svg></span><h3 class="pop" data-i="x5">Trading companies</h3><p data-i="x5d">Purchasing, pricing, credit limits and stock movement between branches.</p></article></li>
+<li class="rv" style="--d:.3s"><article class="sector other tilt"><span class="ico pop far"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span><h3 class="pop" data-i="x6">Other sectors</h3><p data-i="x6d">The methodology follows the Standards, not one industry. Talk to us about yours.</p></article></li>
+</ul>
+</div>
+</section>
+
+<section class="band roles" id="roles">
+<div class="wrap">
+<div class="head rv">
+<p class="eyebrow" data-i="r_eye">For everyone who signs off</p>
+<h2 data-i="r_h">A short answer for each person in the decision.</h2>
+</div>
+<ul class="cards">
+<li class="rv"><article class="role tilt"><span class="who-tag" data-i="r1k">Chief Audit Executive</span><h3 class="pop" data-i="r1t">One standard method for the whole team</h3><p data-i="r1d">Every engagement follows the same planning, testing and reporting steps, so quality no longer depends on who ran the audit.</p></article></li>
+<li class="rv" style="--d:.06s"><article class="role tilt"><span class="who-tag" data-i="r2k">CFO</span><h3 class="pop" data-i="r2t">One price, no hidden project</h3><p data-i="r2d">Licence and implementation come in one quote. Hours spent consolidating spreadsheets and chasing action owners by email go back into audit work.</p></article></li>
+<li class="rv" style="--d:.12s"><article class="role tilt"><span class="who-tag" data-i="r3k">IT and security</span><h3 class="pop" data-i="r3t">Hosted in Egypt, nothing to install</h3><p data-i="r3d">Browser-based, with encryption, role-based access, MFA, SSO and an immutable audit trail. It runs standalone, with no ERP connection required.</p></article></li>
+<li class="rv" style="--d:.18s"><article class="role tilt"><span class="who-tag" data-i="r4k">Procurement</span><h3 class="pop" data-i="r4t">Live in about two weeks</h3><p data-i="r4d">Implementation, Excel migration and onboarding are included, and the team is working in the system in about two weeks.</p></article></li>
+</ul>
+</div>
+</section>
+
+<section class="expert band" id="expertise">
+<div class="wrap">
+<div class="years rv"><div class="card tilt">
+<span class="big pop far" id="count" data-count="30" aria-hidden="true">30</span>
+<small class="pop" data-i="e_years">years of internal audit leadership</small>
+<div class="who"><img class="photo" src="data:image/jpeg;base64,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" alt="Ihab Abdelmoneim" width="64" height="64"><div><strong data-i="e_name">Ihab Abdelmoneim</strong><span data-i="e_role">Co-owner and internal audit expert</span></div></div>
+</div></div>
+<div class="copy rv" style="--d:.12s">
+<p class="eyebrow" data-i="e_eye">The expertise behind it</p>
+<h2 data-i="e_h">Shaped by 30 years of internal audit in Egypt.</h2>
+<p class="lead" data-i="e_p">AUDITool's methodology comes from Ihab Abdelmoneim, a co-owner of the company, who brings three decades of leadership in internal audit, governance, risk management, and compliance at local and multinational firms.</p>
+<div class="duo">
+<div><strong data-i="e1t">Global Internal Audit Standards</strong><span data-i="e1d">The workflow is built on the IIA's 2024 Standards, in force since January 2025.</span></div>
+<div><strong data-i="e2t">Auditors and engineers</strong><span data-i="e2d">Practitioner-led design, delivered by a team with backgrounds in both internal audit and software development.</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="band" id="security">
+<div class="wrap">
+<div class="head rv">
+<p class="eyebrow" data-i="k_eye">Security and deployment</p>
+<h2 data-i="k_h">How your audit data is protected.</h2>
+<p class="lead" data-i="k_p">Audit files hold a company's most sensitive findings. These are the controls in place today.</p>
+</div>
+<ul class="controls">
+<li class="rv"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong data-i="c_1t">Hosted in Egypt</strong><span data-i="c_1d">Data is stored and processed on servers inside Egypt.</span></div></li>
+<li class="rv" style="--d:.05s"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div><strong data-i="c_2t">Encryption</strong><span data-i="c_2d">Audit data is encrypted, so it cannot be read outside the system.</span></div></li>
+<li class="rv" style="--d:.1s"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M17 11l2 2 3-4"/></svg><div><strong data-i="c_3t">Role-based access</strong><span data-i="c_3d">Auditors, reviewers and auditees see only what their role allows.</span></div></li>
+<li class="rv" style="--d:.15s"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 4h11v16H8zM5 7v13h11"/><path d="M11 9h5M11 13h5"/></svg><div><strong data-i="c_4t">Immutable audit trail</strong><span data-i="c_4d">Every change is recorded with who made it and when, and the log cannot be edited.</span></div></li>
+<li class="rv" style="--d:.2s"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 17h2"/></svg><div><strong data-i="c_5t">Multi-factor authentication</strong><span data-i="c_5d">A second factor is required at sign-in.</span></div></li>
+<li class="rv" style="--d:.25s"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><path d="M12 12h9M18 12v3M21 12v2"/></svg><div><strong data-i="c_6t">Single sign-on</strong><span data-i="c_6d">Staff can sign in with their company account.</span></div></li>
+</ul>
+<ul class="cards deploy">
+<li class="rv"><article class="sec tilt"><span class="badge" data-i="k1b">Available now</span><h3 class="pop" data-i="k1t">Cloud</h3><p data-i="k1d">Fully managed hosting in Egypt. Nothing to install and no infrastructure to maintain.</p></article></li>
+<li class="rv" style="--d:.08s"><article class="sec tilt"><span class="badge soft" data-i="k2b">Coming soon</span><h3 class="pop" data-i="k2t">On-premise</h3><p data-i="k2d">For organisations that must run AUDITool on their own infrastructure.</p></article></li>
+</ul>
+</div>
+</section>
+
+<section class="band faq-band" id="faq">
+<div class="wrap faqwrap">
+<div class="head rv">
+<p class="eyebrow" data-i="q_eye">Questions buyers ask</p>
+<h2 data-i="q_h">Before you book a demo.</h2>
+</div>
+<div class="faq rv">
+<details><summary data-i="q1">How do we move from our existing Excel files?</summary><p data-i="a1">Migration is part of implementation. Your existing plans, risk registers and open findings are brought into AUDITool, so the team starts with its own history.</p></details>
+<details><summary data-i="q2">How long does implementation take, and how is it priced?</summary><p data-i="a2">About two weeks from signing. AUDITool is licensed per company, and the price includes implementation. Ask for a quote on the demo call.</p></details>
+<details><summary data-i="q3">Does it handle sampling and data analytics?</summary><p data-i="a3">Yes. Sampling and data analysis are part of fieldwork, and the results are saved as working papers in the engagement.</p></details>
+<details><summary data-i="q4">Does it integrate with our ERP or Active Directory?</summary><p data-i="a4">Not today. AUDITool runs as a standalone system and needs no connection to your ERP, which keeps the IT review short.</p></details>
+<details><summary data-i="q5">Can fieldwork be done offline or on a phone?</summary><p data-i="a5">Not yet. AUDITool runs in the browser on a laptop or desktop and needs an internet connection.</p></details>
+<details><summary data-i="q6">Is AUDITool ISO 27001 certified?</summary><p data-i="a6">Not yet. The controls listed in the security section are in place today, and we will walk your IT team through them in detail.</p></details>
+</div>
+</div>
+</section>
+
+<section class="demo band" id="demo">
+<div class="blob a" aria-hidden="true"></div><div class="blob b" aria-hidden="true"></div>
+<div class="wrap">
+<div class="copy rv">
+<h2 data-i="d_h">See AUDITool on your own audit plan.</h2>
+<p class="lead" data-i="d_p">Book a demo and we will walk your team through a full audit engagement in the system, from planning to follow-up.</p>
+<div class="contact">
+<a class="link" href="tel:+201222108577" dir="ltr">+20 122 210 8577</a>
+<a class="link" href="mailto:hello@3d-pi.com" dir="ltr">hello@3d-pi.com</a>
+</div>
+<a class="btn wa magnet" href="https://wa.me/201222108577" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg><span data-i="wa">Chat on WhatsApp</span></a>
+</div>
+<form class="rv" id="form" style="--d:.12s" novalidate>
+<div class="field"><input id="f-name" name="name" type="text" autocomplete="name" placeholder=" " required><label for="f-name" data-i="f1">Full name</label></div>
+<div class="field"><input id="f-title" name="title" type="text" autocomplete="organization-title" placeholder=" "><label for="f-title" data-i="f2">Job title</label></div>
+<div class="field"><input id="f-company" name="company" type="text" autocomplete="organization" placeholder=" " required><label for="f-company" data-i="f3">Company</label></div>
+<div class="field"><input id="f-sector" name="sector" type="text" placeholder=" "><label for="f-sector" data-i="f4">Sector</label></div>
+<div class="field"><input id="f-email" name="email" type="email" dir="ltr" autocomplete="email" placeholder=" " required><label for="f-email" data-i="f5">Work email</label></div>
+<div class="field"><input id="f-phone" name="phone" type="tel" dir="ltr" autocomplete="tel" placeholder=" "><label for="f-phone" data-i="f6">Phone</label></div>
+<button class="btn lg magnet" type="submit"><span data-i="cta">Book a demo</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+<p class="next" data-i="next">We reply within one business day to arrange a time that suits your team.</p>
+<p class="status" id="status" role="status"></p>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div class="mark"><svg aria-hidden="true" viewBox="-55.637 -63.574 120.369 120.369"><g fill="none" stroke="#0B2A4A" stroke-width="4.5" stroke-miterlimit="10"><path d="M13.093 -35.407 A37.75 37.750 0 1 0 36.581 -9.320 L-4.458 4.014 Z"/><path d="M7.803 -7.026 L24.496 -44.529 A37.75 37.750 0 0 1 46.845 -19.708 Z"/></g></svg><span data-i="foot">AUDITool is a product of 3D-Pi Integrated Solutions LLC.</span></div>
+<span dir="ltr">© 2026 3D-Pi Integrated Solutions LLC</span>
+<a class="top" href="#top"><span data-i="totop">Back to top</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+</div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+var root=document.documentElement;root.classList.add('js');
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var FINE=matchMedia('(hover: hover) and (pointer: fine)').matches;
+var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var NS='http://www.w3.org/2000/svg';
+
+/* ---------- language ---------- */
+var AR={
+nav1:'المنصة',nav2:'لماذا AUDITool',nav3:'القطاعات',nav4:'الخبرة',nav5:'الأمان',cta:'احجز عرضًا توضيحيًا',
+eyebrow:'إدارة متكاملة للمراجعة الداخلية · مصمَّم للسوق المصري',
+h1:'نقطة مركزية واحدة <mark>لكل أعمال المراجعة.</mark>',
+lead:'يرقمن AUDITool دورة المراجعة الداخلية ويوحّدها من بدايتها إلى نهايتها، من الخطة السنوية المبنية على المخاطر حتى إغلاق آخر إجراء تصحيحي. مصدر واحد موثوق لإدارة المراجعة، بالعربية والإنجليزية.',
+see:'تعرّف على ما يغطيه النظام',
+c1:'التخطيط',c2:'المخاطر والضوابط',c3:'العمل الميداني',c4:'الملاحظات',c5:'المتابعة',c6:'التقارير',
+s1t:'بالعربية والإنجليزية',s1d:'واجهة كاملة من اليمين إلى اليسار',s2t:'آمن وسرّي',s2d:'بيانات المراجعة محمية وخاصة',s3t:'متوافق مع معايير IIA',s3d:'مبني على المعايير الدولية للمهنة',s4t:'دعم محلي على مدار الساعة',s4d:'فريق في توقيتك ويتحدث لغتك',
+t1:'التخطيط المبني على المخاطر',t2:'اختبار الضوابط',t3:'أوراق العمل',t4:'تحليل السبب الجذري',t5:'خطط الإجراءات التصحيحية',t6:'تقارير لجنة المراجعة',t7:'معايير IIA',t8:'المخاطر المتبقية',
+p_eye:'المنصة',p_h:'دورة المراجعة كاملة في نظام واحد متكامل.',p_p:'ست مراحل تتوزع عادةً بين جداول منفصلة ومجلدات مشتركة ورسائل بريد. AUDITool يديرها كمسار عمل واحد موحّد يمكن تتبّعه.',
+m1t:'تخطيط المراجعة',m1d:'ضع خطة المراجعة السنوية المبنية على المخاطر، وحدّد نطاق كل مهمة، ووزّع الموارد على جميع الأنشطة الخاضعة للمراجعة.',
+m2t:'تقييم المخاطر والضوابط',m2d:'قيّم المخاطر المتأصلة والمتبقية، وتصميم الضوابط الرقابية وفعالية تشغيلها، بمنهجية ثابتة في كل مهمة.',
+m3t:'العمل الميداني وأوراق العمل',m3d:'نفّذ برامج المراجعة واربط كل ورقة عمل وكل دليل إثبات بمهمته، مع مسار واضح للمراجعة والاعتماد.',
+m4t:'الملاحظات',m4d:'وثّق كل ملاحظة مرة واحدة، مع درجة خطورتها وسببها الجذري والمسؤول عنها وخطة الإجراءات التصحيحية المتفق عليها.',
+m5t:'متابعة الإجراءات التصحيحية',m5d:'تابع كل إجراء تصحيحي حتى إغلاقه، بمسؤولية محددة ومواعيد استحقاق وحالة واضحة.',
+m6t:'التقارير ولوحات المتابعة',m6d:'وفّر للإدارة العليا ولجنة المراجعة رؤية لحظية لتغطية المراجعة والملاحظات المفتوحة وحالة الإجراءات.',
+w_eye:'لماذا AUDITool',w_h:'مصمَّم لطريقة عمل المراجعة الداخلية في مصر.',w_p:'تختار إدارات المراجعة هنا غالبًا بين جداول لا تتحمّل حجم العمل ومنصات عالمية صُمّمت لأسواق أخرى. AUDITool هو الخيار الثالث: نظام بمستوى المؤسسات الكبرى لإدارة المراجعة، مطوَّر محليًا.',
+w1t:'ثنائي اللغة من الأساس',w1d:'واجهتان عربية وإنجليزية، بتخطيط سليم من اليمين إلى اليسار.',
+w2t:'مبني على معايير IIA',w2d:'مسار العمل يتبع معايير معهد المراجعين الداخليين، من تخطيط المهمة حتى إبلاغ النتائج.',
+w3t:'آمن وسرّي',w3d:'بيانات المراجعة محمية وتبقى في سرّية تامة.',
+w4t:'دعم محلي على مدار الساعة',w4d:'تواصل مع فريق في مصر في أي وقت، بالعربية أو الإنجليزية.',
+x_eye:'لمن هذا النظام',x_h:'للشركات التي تسعى إلى التحكم الكامل في كل مراجعة، من الألف إلى الياء.',
+x1:'المؤسسات المالية غير المصرفية',x2:'القطاع الصناعي',x3:'قطاع البترول',x4:'السلع الاستهلاكية سريعة التداول',x5:'الشركات التجارية',x6:'قطاعات أخرى',x6d:'تواصل معنا بخصوص قطاعك',
+e_years:'عامًا من قيادة المراجعة الداخلية',e_name:'إيهاب عبد المنعم',e_role:'شريك مالك وخبير المراجعة الداخلية',
+e_eye:'الخبرة وراء النظام',e_h:'خلاصة 30 عامًا من المراجعة الداخلية في مصر.',
+e_p:'منهجية AUDITool وضعها إيهاب عبد المنعم، أحد ملّاك الشركة، بخبرة قيادية تمتد ثلاثة عقود في المراجعة الداخلية والحوكمة وإدارة المخاطر والالتزام في شركات محلية ومتعددة الجنسيات.',
+e1t:'معايير IIA',e1d:'إجراءات النظام تتبع معايير معهد المراجعين الداخليين.',e2t:'مراجعون ومهندسون',e2d:'تصميم يقوده ممارسون للمهنة، وينفّذه فريق يجمع بين خبرة المراجعة الداخلية وتطوير البرمجيات.',
+k_eye:'الأمان وطريقة التشغيل',k_h:'بيانات المراجعة آمنة وسرّية.',
+k1b:'متاح الآن',k1t:'سحابي',k1d:'استضافة سحابية آمنة ومُدارة بالكامل. لا حاجة إلى تثبيت ولا إلى بنية تقنية تتولى صيانتها.',
+k2b:'قريبًا',k2t:'على خوادم الشركة',k2d:'للمؤسسات التي يلزمها تشغيل AUDITool على بنيتها التقنية الخاصة.',
+k3b:'مضمون',k3t:'السرّية',k3d:'بيانات المراجعة محمية وتبقى في سرّية تامة.',
+d_h:'شاهد AUDITool على خطة المراجعة الخاصة بك.',d_p:'احجز عرضًا توضيحيًا، ونستعرض مع فريقك مهمة مراجعة كاملة داخل النظام، من التخطيط حتى المتابعة.',
+f1:'الاسم الكامل',f2:'المسمّى الوظيفي',f3:'الشركة',f4:'القطاع',f5:'البريد الإلكتروني للعمل',f6:'رقم الهاتف',
+nav6:'الأسئلة الشائعة',
+h1:'من الخطة السنوية حتى إغلاق آخر إجراء، <mark>في نظام واحد.</mark>',
+s1t:'بالعربية والإنجليزية',s1d:'واجهة كاملة من اليمين إلى اليسار',s2t:'استضافة داخل مصر',s2d:'بيانات المراجعة لا تغادر البلاد',s3t:'المعايير العالمية للمراجعة الداخلية',s3d:'مبني على إصدار 2024 من معهد المراجعين الداخليين',s4t:'تشغيل خلال أسبوعين تقريبًا',s4d:'التطبيق مشمول في السعر',
+t4:'العينات الإحصائية',t7:'المعايير العالمية للمراجعة الداخلية',
+p_p:'ست مراحل تتوزع عادةً بين جداول منفصلة ومجلدات مشتركة ورسائل بريد. AUDITool يديرها كمسار عمل واحد موحّد يمكن تتبّعه، ومربوط بالمعايير العالمية للمراجعة الداخلية الصادرة عن معهد المراجعين الداخليين (2024).',
+m3t:'العمل الميداني والعينات والتحليل',m3d:'نفّذ برامج المراجعة، واسحب العينات، وحلّل البيانات. وتبقى كل ورقة عمل وكل دليل إثبات مرتبطة بمهمتها، مع مسار واضح للمراجعة والاعتماد.',
+g1:'المعايير العالمية · المعيار 9.4',g2:'المعايير العالمية · المعيار 13.2',g3:'المعايير العالمية · المبدأ 14',g4:'المعايير العالمية · المبدأ 14',g5:'المعايير العالمية · المعيار 15.2',g6:'المعايير العالمية · المعيار 15.1',
+w1t:'عربي في الأصل، لا ترجمة',w1d:'واجهتان عربية وإنجليزية بتخطيط سليم من اليمين إلى اليسار، ليعمل كل مراجع باللغة التي يكتب بها تقاريره.',
+w2t:'ملفات Excel الحالية تنتقل معك',w2d:'ننقل خطط المراجعة وسجلات المخاطر والملاحظات الحالية إلى AUDITool أثناء التطبيق، فتبدأ ببياناتك أنت لا بنظام فارغ.',
+w3t:'العينات وتحليل البيانات من داخل النظام',w3d:'اسحب العينات وحلّل البيانات داخل المهمة نفسها، فيبقى الدليل والاستنتاج في ملف واحد.',
+w4t:'سعر واحد يشمل التطبيق',w4d:'الترخيص والتطبيق في عرض سعر واحد، دون مشروع استشاري منفصل قبل أن تبدأ.',
+x1d:'الائتمان والتحصيل واختبارات الالتزام في الأنشطة الخاضعة لرقابة الهيئة العامة للرقابة المالية.',x2d:'دورات المشتريات والمخزون والإنتاج والصيانة عبر المصانع.',x3d:'إنفاق المقاولين والعمليات المشتركة والسلامة والصحة المهنية والعمليات كثيفة الأصول.',x4d:'شبكات التوزيع والإنفاق التسويقي التجاري وجرد المخزون ومراجعة الفروع.',x5d:'المشتريات والتسعير وحدود الائتمان وحركة المخزون بين الفروع.',x6d:'المنهجية تتبع المعايير لا قطاعًا بعينه. تواصل معنا بخصوص قطاعك.',
+r_eye:'لكل من يشارك في القرار',r_h:'إجابة مختصرة لكل طرف في قرار الشراء.',
+r1k:'رئيس المراجعة الداخلية',r1t:'منهجية واحدة للفريق كله',r1d:'كل مهمة تمر بخطوات التخطيط والاختبار وإعداد التقرير نفسها، فلا تعود الجودة مرهونة بمن تولّى المراجعة.',
+r2k:'المدير المالي',r2t:'سعر واحد بلا مشروع خفي',r2d:'الترخيص والتطبيق في عرض سعر واحد. والساعات التي تضيع في تجميع الجداول وملاحقة المسؤولين بالبريد تعود إلى عمل المراجعة نفسه.',
+r3k:'تقنية المعلومات والأمن',r3t:'استضافة داخل مصر، بلا تثبيت',r3d:'يعمل من المتصفح، مع التشفير وصلاحيات حسب الدور والتحقق متعدد العوامل والدخول الموحد وسجل تتبع غير قابل للتعديل. ويعمل مستقلًا دون حاجة للربط بنظام ERP.',
+r4k:'المشتريات',r4t:'تشغيل خلال أسبوعين تقريبًا',r4d:'التطبيق ونقل بيانات Excel وتأهيل الفريق مشمولة، ويبدأ الفريق العمل على النظام خلال أسبوعين تقريبًا.',
+e_p:'منهجية AUDITool وضعها إيهاب عبد المنعم، أحد ملّاك الشركة، بخبرة قيادية تمتد ثلاثة عقود في المراجعة الداخلية والحوكمة وإدارة المخاطر والالتزام في شركات محلية ومتعددة الجنسيات.',
+e1t:'المعايير العالمية للمراجعة الداخلية',e1d:'مسار العمل مبني على معايير 2024 الصادرة عن معهد المراجعين الداخليين، والسارية منذ يناير 2025.',
+k_h:'كيف نحمي بيانات المراجعة.',k_p:'ملفات المراجعة تضم أدق ملاحظات الشركة وأكثرها حساسية. هذه هي الضوابط المعمول بها اليوم.',
+c_1t:'استضافة داخل مصر',c_1d:'تُخزَّن البيانات وتُعالَج على خوادم داخل مصر.',c_2t:'التشفير',c_2d:'بيانات المراجعة مشفّرة، فلا يمكن قراءتها خارج النظام.',c_3t:'صلاحيات حسب الدور',c_3d:'يرى المراجع والمعتمِد والجهة محل المراجعة ما يسمح به دور كل منهم فقط.',c_4t:'سجل تتبع غير قابل للتعديل',c_4d:'يُسجَّل كل تعديل باسم صاحبه ووقته، ولا يمكن تعديل السجل نفسه.',c_5t:'التحقق متعدد العوامل',c_5d:'يُطلب عامل تحقق ثانٍ عند تسجيل الدخول.',c_6t:'الدخول الموحد',c_6d:'يدخل الموظفون بحساب الشركة نفسه.',
+k1d:'استضافة مُدارة بالكامل داخل مصر. لا حاجة إلى تثبيت ولا إلى بنية تقنية تتولى صيانتها.',
+q_eye:'أسئلة يطرحها المشترون',q_h:'قبل أن تحجز العرض التوضيحي.',
+q1:'كيف ننتقل من ملفات Excel الحالية؟',a1:'نقل البيانات جزء من التطبيق. ننقل خطط المراجعة وسجلات المخاطر والملاحظات المفتوحة إلى AUDITool، فيبدأ الفريق بتاريخه هو.',
+q2:'كم يستغرق التطبيق، وكيف يُسعَّر النظام؟',a2:'نحو أسبوعين من التعاقد. يُرخَّص AUDITool لكل شركة، والسعر يشمل التطبيق. اطلب عرض السعر خلال العرض التوضيحي.',
+q3:'هل يدعم سحب العينات وتحليل البيانات؟',a3:'نعم. سحب العينات وتحليل البيانات جزء من العمل الميداني، وتُحفظ النتائج أوراقَ عمل داخل المهمة.',
+q4:'هل يتكامل مع نظام ERP أو Active Directory لدينا؟',a4:'ليس حاليًا. يعمل AUDITool نظامًا مستقلًا لا يحتاج إلى ربط بنظام ERP، ما يختصر مراجعة إدارة تقنية المعلومات.',
+q5:'هل يمكن تنفيذ العمل الميداني دون اتصال أو من الهاتف؟',a5:'ليس بعد. يعمل AUDITool من المتصفح على الحاسوب المكتبي أو المحمول، ويحتاج إلى اتصال بالإنترنت.',
+q6:'هل AUDITool حاصل على شهادة ISO 27001؟',a6:'ليس بعد. الضوابط المذكورة في قسم الأمان معمول بها اليوم، ونستعرضها بالتفصيل مع فريق تقنية المعلومات لديكم.',
+wa:'تواصل عبر واتساب',next:'نرد خلال يوم عمل واحد لتحديد موعد يناسب فريقك.',
+foot:'AUDITool أحد منتجات <span dir="ltr">3D-Pi Integrated Solutions LLC</span>.',totop:'العودة إلى الأعلى'
+};
+var MSG={
+en:{need:'Please fill in your name, company, and a valid work email.',open:'Your email app should open with the request ready to send. If it does not, email hello@3d-pi.com or call +20 122 210 8577.',title:'AUDITool | Internal Audit Management System',nav:'Primary',lang:'Language'},
+ar:{need:'يرجى إدخال الاسم والشركة وبريد إلكتروني صحيح للعمل.',open:'سيفتح تطبيق البريد لديك والطلب جاهز للإرسال. إن لم يفتح، راسلنا على hello@3d-pi.com أو اتصل على ‎+20 122 210 8577.',title:'AUDITool | نظام إدارة المراجعة الداخلية',nav:'التنقل الرئيسي',lang:'اللغة'}
+};
+var nodes=$$('[data-i]'),EN={};
+nodes.forEach(function(n){if(!(n.dataset.i in EN))EN[n.dataset.i]=n.innerHTML});
+var lang='en';
+function applyLang(l){
+  lang=l;root.lang=l;root.dir=l==='ar'?'rtl':'ltr';
+  nodes.forEach(function(n){var k=n.dataset.i;n.innerHTML=(l==='ar'&&AR[k])?AR[k]:EN[k]});
+  document.title=MSG[l].title;
+  $('nav').setAttribute('aria-label',MSG[l].nav);$('.lang').setAttribute('aria-label',MSG[l].lang);
+  $('.lang').dataset.on=l;
+  $$('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.lang===l))});
+  $('#status').textContent='';
+  if(window.__cap)window.__cap();
+  try{localStorage.setItem('auditool-lang',l)}catch(e){}
+}
+function setLang(l){
+  if(l===lang)return;
+  if(RM){applyLang(l);return}
+  document.body.classList.add('swap');
+  setTimeout(function(){applyLang(l);document.body.classList.remove('swap')},170);
+}
+$$('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang)})});
+var saved=null;try{saved=localStorage.getItem('auditool-lang')}catch(e){}
+if(location.hash==='#ar')saved='ar';
+
+/* ---------- 3D logo ---------- */
+function stack(host,d,vb,n,gap,front,side){
+  for(var i=n-1;i>=0;i--){
+    var s=document.createElementNS(NS,'svg');s.setAttribute('viewBox',vb);
+    var p=document.createElementNS(NS,'path');p.setAttribute('d',d);
+    p.setAttribute('fill',i===0?front:side);p.setAttribute('stroke',i===0?front:side);p.setAttribute('stroke-width','2');p.setAttribute('stroke-linejoin','round');
+    s.appendChild(p);s.style.transform='translateZ('+(-i*gap)+'px)';host.appendChild(s);
+  }
+}
+var VB='-56.101 -67.569 125.014 125.014';
+stack($('#body3d'),'M13.093 -35.407 A37.75 37.75 0 1 0 36.581 -9.320 L-4.458 4.014 Z',VB,22,1.6,'#FFFFFF','#8CC4EE');
+stack($('#slice3d'),'M11.519 -10.372 L28.212 -47.874 A37.75 37.75 0 0 1 50.561 -23.053 Z',VB,22,1.6,'#0B3A66','#072746');
+
+var rig=$('#rig'),hero=$('#hero'),tx=0,ty=0,cx=0,cy=0,heroOn=true,t0=performance.now();
+if(FINE&&!RM){hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();tx=(e.clientX-r.left)/r.width-.5;ty=(e.clientY-r.top)/r.height-.5});
+  hero.addEventListener('pointerleave',function(){tx=0;ty=0})}
+
+/* ---------- hero network canvas ---------- */
+var cv=$('#net'),ctx=cv.getContext('2d'),pts=[],W=0,H=0,DPR=Math.min(window.devicePixelRatio||1,2);
+function sizeNet(){var r=hero.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);
+  var n=Math.round(Math.min(70,W*H/21000));pts=[];for(var i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28})}
+function drawNet(move){
+  ctx.clearRect(0,0,W,H);
+  var mx=(tx+.5)*W,my=(ty+.5)*H;
+  for(var i=0;i<pts.length;i++){var p=pts[i];
+    if(move){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+    for(var j=i+1;j<pts.length;j++){var q=pts[j],dx=p.x-q.x,dy=p.y-q.y,d=dx*dx+dy*dy;
+      if(d<17000){ctx.strokeStyle='rgba(11,58,102,'+(.16*(1-d/17000)).toFixed(3)+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}}
+    var near=FINE&&(tx||ty)?Math.max(0,1-Math.hypot(p.x-mx,p.y-my)/220):0;
+    ctx.fillStyle='rgba(11,58,102,'+(.28+near*.5).toFixed(3)+')';ctx.beginPath();ctx.arc(p.x,p.y,1.8+near*2.4,0,6.283);ctx.fill();
+  }
+}
+sizeNet();drawNet(false);
+var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(function(){sizeNet();drawNet(false)},150)});
+
+/* ---------- lifecycle pie ---------- */
+var pieRig=$('#pieRig'),slices=[],mods=$$('#mods .mod'),active=-1,auto=true,pieOn=false;
+(function(){
+  var R=100;
+  for(var i=0;i<6;i++){
+    var a0=(-90+i*60)*Math.PI/180,a1=(-90+(i+1)*60)*Math.PI/180,am=(a0+a1)/2;
+    var d='M0 0 L'+(R*Math.cos(a0)).toFixed(2)+' '+(R*Math.sin(a0)).toFixed(2)+' A'+R+' '+R+' 0 0 1 '+(R*Math.cos(a1)).toFixed(2)+' '+(R*Math.sin(a1)).toFixed(2)+' Z';
+    var el=document.createElement('div');el.className='sl';el.style.setProperty('--bx',Math.cos(am).toFixed(3));el.style.setProperty('--by',Math.sin(am).toFixed(3));
+    for(var k=9;k>=0;k--){var s=document.createElementNS(NS,'svg');s.setAttribute('viewBox','-135 -135 270 270');
+      var p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('class',k===0?'top':'side');
+      s.appendChild(p);s.style.transform='translateZ('+(-k*2.6)+'px)';el.appendChild(s);
+      if(k===0)(function(ix){p.addEventListener('pointerenter',function(){auto=false;setActive(ix)});p.addEventListener('click',function(){auto=false;setActive(ix)})})(i);}
+    pieRig.appendChild(el);slices.push(el);
+  }
+})();
+var cap=$('#cap');
+function renderCap(){if(active<0)return;var m=mods[active];cap.innerHTML='<b>'+$('.n',m).textContent+'</b><span>'+$('h3',m).textContent+'</span>'}
+window.__cap=renderCap;
+function setActive(i){if(i===active)return;active=i;
+  slices.forEach(function(s,k){s.classList.toggle('on',k===i)});mods.forEach(function(m,k){m.classList.toggle('on',k===i)});renderCap()}
+mods.forEach(function(m,i){
+  m.addEventListener('pointerenter',function(){auto=false;setActive(i)});
+  m.addEventListener('focus',function(){auto=false;setActive(i)});
+});
+setActive(0);
+if(!RM)setInterval(function(){if(auto&&pieOn)setActive((active+1)%6)},2600);
+if(!FINE&&'IntersectionObserver' in window){ /* touch: the card nearest the middle of the screen is active */
+  var mio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){auto=false;setActive(mods.indexOf(e.target))}})},{rootMargin:'-45% 0px -45% 0px'});
+  mods.forEach(function(m){mio.observe(m)});
+}
+var px=0,py=0,pcx=0,pcy=0,pieBox=$('#pie');
+if(FINE&&!RM){$('#platform').addEventListener('pointermove',function(e){var r=pieBox.getBoundingClientRect();px=Math.max(-1,Math.min(1,(e.clientX-(r.left+r.width/2))/600));py=Math.max(-1,Math.min(1,(e.clientY-(r.top+r.height/2))/600))})}
+
+/* ---------- main loop ---------- */
+function frame(now){
+  var t=(now-t0)/1000;
+  if(heroOn){cx+=(tx-cx)*.06;cy+=(ty-cy)*.06;
+    rig.style.transform='rotateX('+(14-cy*26+Math.sin(t*.7)*3).toFixed(2)+'deg) rotateY('+(-20+cx*40+Math.sin(t*.5)*6).toFixed(2)+'deg)';
+    drawNet(true)}
+  if(pieOn){pcx+=(px-pcx)*.07;pcy+=(py-pcy)*.07;
+    pieRig.style.transform='rotateX('+(54-pcy*10).toFixed(2)+'deg) rotateZ('+(-18+pcx*26+Math.sin(t*.4)*4).toFixed(2)+'deg)'}
+  requestAnimationFrame(frame);
+}
+if(!RM)requestAnimationFrame(frame);
+
+/* ---------- visibility + reveal ---------- */
+if('IntersectionObserver' in window){
+  new IntersectionObserver(function(es){heroOn=es[0].isIntersecting}).observe(hero);
+  new IntersectionObserver(function(es){pieOn=es[0].isIntersecting}).observe($('#platform'));
+  var rio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target);
+    var c=$('[data-count]',e.target);if(c)countUp(c)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  $$('.rv').forEach(function(el){rio.observe(el)});
+  var secs=$$('main section[id]'),links=$$('nav a');
+  var sio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){sio.observe(s)});
+}else{$$('.rv').forEach(function(el){el.classList.add('in')});pieOn=true}
+setTimeout(function(){$$('.rv').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight)el.classList.add('in')})},1200);
+
+function countUp(el){if(RM)return;var end=+el.dataset.count,s=performance.now();
+  (function step(n){var k=Math.min(1,(n-s)/1600),v=Math.round(end*(1-Math.pow(1-k,3)));el.textContent=v;if(k<1)requestAnimationFrame(step)})(s)}
+
+/* ---------- scroll chrome ---------- */
+var bar=$('.progress i'),head=$('header'),tick=false;
+function onScroll(){var h=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?scrollY/h:0)+')';head.classList.toggle('scrolled',scrollY>24);tick=false}
+addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+
+/* ---------- pointer effects ---------- */
+if(FINE&&!RM){
+  var glow=$('.glow');
+  addEventListener('pointermove',function(e){glow.classList.add('on');glow.style.transform='translate3d('+e.clientX+'px,'+e.clientY+'px,0)'},{passive:true});
+  document.addEventListener('pointerleave',function(){glow.classList.remove('on')});
+  $$('.tilt').forEach(function(el){
+    el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+      el.classList.add('live');el.style.setProperty('--ry',((x-.5)*14).toFixed(2)+'deg');el.style.setProperty('--rx',((.5-y)*12).toFixed(2)+'deg');
+      el.style.setProperty('--gx',(x*100).toFixed(1)+'%');el.style.setProperty('--gy',(y*100).toFixed(1)+'%')});
+    el.addEventListener('pointerleave',function(){el.classList.remove('live');el.style.setProperty('--rx','0deg');el.style.setProperty('--ry','0deg')});
+  });
+  $$('.magnet').forEach(function(el){
+    el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();el.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18).toFixed(1)+'px,'+((e.clientY-r.top-r.height/2)*.3).toFixed(1)+'px)'});
+    el.addEventListener('pointerleave',function(){el.style.transform=''});
+  });
+}
+
+/* ---------- demo form ---------- */
+$('#form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=e.target,v=function(n){return f.elements[n].value.trim()},st=$('#status');
+  if(!v('name')||!v('company')||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))){st.textContent=MSG[lang].need;return}
+  var body=['Name: '+v('name'),'Job title: '+v('title'),'Company: '+v('company'),'Sector: '+v('sector'),'Work email: '+v('email'),'Phone: '+v('phone')].join('\n');
+  st.textContent=MSG[lang].open;
+  try{location.href='mailto:hello@3d-pi.com?subject='+encodeURIComponent('AUDITool demo request: '+v('company'))+'&body='+encodeURIComponent(body)}catch(err){}
+});
+
+if(saved==='ar')applyLang('ar');
+})();
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AUDITool | Internal Audit Management System</title>
+<meta name="description" content="AUDITool digitises and standardises the end-to-end internal audit lifecycle, from the risk-based annual plan to the closure of the last management action. In Arabic and English.">
+<meta property="og:title" content="AUDITool | Internal Audit Management System">
+<meta property="og:description" content="One focal point for every audit action. Built for Egypt, in Arabic and English.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#DCEEFB">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-56.194 -68.368 125.943 125.943'%3E%3Crect x='-56.194' y='-68.368' width='125.943' height='125.943' rx='27.707' fill='%230B2A4A'/%3E%3Cg fill='%23fff' stroke='%23fff' stroke-width='4.5'%3E%3Cpath d='M13.093 -35.407 A37.75 37.75 0 1 0 36.581 -9.320 L-4.458 4.014 Z'/%3E%3Cpath d='M12.262 -11.041 L28.955 -48.544 A37.75 37.75 0 0 1 51.304 -23.723 Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap">
+<style>
+/* Layout idea: white and baby-blue bands; the pie mark is the recurring 3D object (hero logo, six-slice lifecycle). */
+:root{
+  --white:#FFFFFF; --sky:#DCEEFB; --mist:#F3F9FE; --sky-deep:#BFE0F7; --blue:#8CC4EE;
+  --navy:#0B2A4A; --navy-2:#0B3A66; --muted:#3A5068; --line:#D5E3EF;
+  --display:'Montserrat','Segoe UI',Arial,sans-serif;
+  --body:'IBM Plex Sans','Segoe UI',Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  color-scheme:light;
+}
+html[lang="ar"]{--display:'IBM Plex Sans Arabic','Segoe UI',Tahoma,sans-serif;--body:'IBM Plex Sans Arabic','Segoe UI',Tahoma,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{margin:0;background:var(--white);color:var(--navy);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html[lang="ar"] body{font-size:18px;line-height:1.8}
+h1,h2,h3,p,ul{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+img,svg{max-width:100%}
+:focus-visible{outline:3px solid var(--navy-2);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:clamp(20px,5vw,48px)}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+html[lang="ar"] .eyebrow{font-family:var(--body);letter-spacing:0;font-size:15px;font-weight:500}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,4vw,50px);line-height:1.08;letter-spacing:-.025em;text-wrap:balance}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3{letter-spacing:0;line-height:1.4}
+.lead{font-size:19px;color:var(--muted);max-width:36em}
+.head{display:flex;flex-direction:column;gap:16px;max-width:780px}
+section{position:relative}
+.band{padding-block:clamp(72px,9vw,128px)}
+body.swap main,body.swap header,body.swap footer{opacity:.0;transition:opacity .16s}
+main,header,footer{transition:opacity .28s}
+
+/* progress + cursor light */
+.progress{position:fixed;inset-block-start:0;inset-inline:0;height:3px;z-index:60;background:transparent}
+.progress i{display:block;height:100%;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--blue),var(--navy-2))}
+html[dir="rtl"] .progress i{transform-origin:100% 50%}
+.glow{position:fixed;left:0;top:0;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(140,196,238,.28),rgba(140,196,238,0) 62%);opacity:0;transition:opacity .4s;will-change:transform}
+.glow.on{opacity:1}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:13px 24px;border:0;border-radius:10px;background:var(--navy-2);color:#fff;font:600 16px/1.2 var(--body);text-decoration:none;cursor:pointer;overflow:hidden;isolation:isolate;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .25s;box-shadow:0 1px 0 #072746,0 10px 24px -12px rgba(11,58,102,.7)}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.38) 48%,transparent 66%);transform:translateX(-120%);transition:transform .7s var(--ease)}
+.btn:hover{background:#0E467B;box-shadow:0 1px 0 #072746,0 18px 34px -14px rgba(11,58,102,.85)}
+.btn:hover::before{transform:translateX(120%)}
+.btn:active{transform:translateY(1px) scale(.98)!important}
+.btn svg{width:18px;height:18px;transition:transform .35s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+html[dir="rtl"] .btn svg{transform:scaleX(-1)}
+html[dir="rtl"] .btn:hover svg{transform:scaleX(-1) translateX(4px)}
+.btn.lg{min-height:56px;padding:17px 30px;font-size:17px}
+.link{position:relative;font-weight:500;text-decoration:none;padding-block:12px}
+.link::after{content:"";position:absolute;inset-inline:0;bottom:8px;height:2px;background:currentColor;transform:scaleX(.25);transform-origin:0 50%;transition:transform .4s var(--ease)}
+html[dir="rtl"] .link::after{transform-origin:100% 50%}
+.link:hover::after{transform:scaleX(1)}
+
+/* nav */
+header{position:fixed;inset-block-start:0;inset-inline:0;z-index:50;transition:background .3s,box-shadow .3s,backdrop-filter .3s}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:18px;transition:padding .3s}
+header.scrolled{background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 1px 0 var(--line),0 12px 30px -22px rgba(11,42,74,.5)}
+header.scrolled .wrap{padding-block:10px}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo svg{height:44px;width:auto;display:block;transition:transform .5s var(--ease)}
+.logo:hover svg{transform:rotate(-4deg) scale(1.04)}
+.logo .slice{transition:transform .5s var(--ease)}
+.logo:hover .slice{transform:translate(4px,-4px)}
+nav ul{display:flex;gap:30px;font-size:15px;font-weight:500}
+nav a{position:relative;text-decoration:none;color:var(--muted);padding-block:10px;transition:color .2s}
+nav a::after{content:"";position:absolute;inset-inline:0;bottom:4px;height:2px;border-radius:2px;background:var(--navy-2);transform:scaleX(0);transition:transform .35s var(--ease)}
+nav a:hover,nav a.on{color:var(--navy)}
+nav a:hover::after,nav a.on::after{transform:scaleX(1)}
+.tools{display:flex;align-items:center;gap:14px}
+.lang{position:relative;display:flex;padding:3px;border:1px solid var(--sky-deep);border-radius:999px;background:rgba(255,255,255,.7)}
+.lang button{position:relative;z-index:1;min-width:52px;min-height:38px;padding:6px 14px;border:0;border-radius:999px;background:none;color:var(--muted);font:500 14px/1 var(--body);cursor:pointer;transition:color .3s}
+.lang button[aria-pressed="true"]{color:#fff}
+.lang i{position:absolute;inset-block:3px;inset-inline-start:3px;width:calc(50% - 3px);border-radius:999px;background:var(--navy-2);transition:transform .45s var(--ease)}
+.lang[data-on="ar"] i{transform:translateX(100%)}
+html[dir="rtl"] .lang[data-on="ar"] i{transform:translateX(-100%)}
+@media (max-width:920px){nav{display:none}}
+@media (max-width:520px){header .btn{display:none}.logo svg{height:38px}}
+
+/* hero */
+.hero{background:var(--sky);padding-block:clamp(120px,14vw,170px) clamp(64px,8vw,110px);overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.75;pointer-events:none;animation:drift 18s ease-in-out infinite alternate}
+.blob.a{width:520px;height:520px;background:#fff;inset-block-start:-180px;inset-inline-start:-120px}
+.blob.b{width:460px;height:460px;background:var(--sky-deep);inset-block-end:-220px;inset-inline-end:8%;animation-duration:24s;animation-delay:-6s}
+@keyframes drift{to{transform:translate3d(60px,40px,0) scale(1.15)}}
+.hero .wrap{position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:40px}
+.hero-copy{flex:999 1 500px;min-width:0;display:flex;flex-direction:column;gap:26px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(40px,6vw,78px);line-height:1.03;letter-spacing:-.035em;text-wrap:balance}
+html[lang="ar"] h1{font-weight:700;font-size:clamp(38px,5.4vw,70px)}
+mark{color:var(--navy-2);padding:0 .14em;-webkit-box-decoration-break:clone;box-decoration-break:clone;background:linear-gradient(#fff,#fff) no-repeat 0 0/0% 100%;animation:swipe 1s .5s var(--ease) forwards}
+html[dir="rtl"] mark{background-position:100% 0}
+@keyframes swipe{to{background-size:100% 100%}}
+.hero .lead{font-size:clamp(17px,1.6vw,21px)}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:22px}
+.rise{animation:rise .9s var(--ease) both}
+.rise:nth-child(2){animation-delay:.08s}.rise:nth-child(3){animation-delay:.16s}.rise:nth-child(4){animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}}
+
+/* 3D pie */
+.scene{flex:1 1 380px;min-width:0;display:flex;justify-content:center;perspective:1100px}
+.stage{position:relative;width:min(440px,84vw);aspect-ratio:1}
+.rig{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(14deg) rotateY(-20deg);will-change:transform}
+.stack{position:absolute;inset:9%;transform-style:preserve-3d}
+.stack svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.stack.pull{animation:pull 5.5s ease-in-out infinite alternate}
+@keyframes pull{from{transform:translate3d(0,0,10px)}to{transform:translate3d(5.5%,-5%,58px)}}
+.floor{position:absolute;inset-inline:14%;bottom:-2%;height:12%;border-radius:50%;background:radial-gradient(closest-side,rgba(11,42,74,.3),rgba(11,42,74,0));filter:blur(8px);transform:translateZ(-80px)}
+.chip{position:absolute;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.9);border:1px solid #fff;box-shadow:0 14px 30px -14px rgba(11,42,74,.55);font-size:14px;font-weight:600;white-space:nowrap;text-decoration:none;transform-style:preserve-3d;animation:bob 6s ease-in-out infinite alternate;transition:background .3s,color .3s}
+.chip b{font:500 12px var(--mono);color:var(--muted);transition:color .3s}
+.chip:hover{background:var(--navy-2);color:#fff}
+.chip:hover b{color:var(--sky-deep)}
+.chip:nth-child(1){top:2%;left:-6%;--z:70px}
+.chip:nth-child(2){top:-4%;right:2%;--z:120px;animation-delay:-1s}
+.chip:nth-child(3){top:44%;right:-10%;--z:40px;animation-delay:-2s}
+.chip:nth-child(4){bottom:8%;right:0;--z:100px;animation-delay:-3s}
+.chip:nth-child(5){bottom:-3%;left:16%;--z:60px;animation-delay:-4s}
+.chip:nth-child(6){top:52%;left:-12%;--z:130px;animation-delay:-5s}
+@keyframes bob{from{transform:translate3d(0,-7px,var(--z))}to{transform:translate3d(0,9px,var(--z))}}
+@media (max-width:640px){.chip:nth-child(1){left:0}.chip:nth-child(3){right:-2%}.chip:nth-child(6){left:-2%}.chip{font-size:12px;padding:7px 11px}}
+
+/* strip */
+.strip{background:var(--white);border-bottom:1px solid var(--line)}
+.strip ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:0 28px}
+.strip li{display:flex;gap:14px;align-items:flex-start;padding-block:28px}
+.strip svg{flex:none;width:30px;height:30px;margin-top:2px;stroke:var(--navy-2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .5s var(--ease)}
+.strip li:hover svg{transform:translateY(-4px) rotate(-6deg) scale(1.12)}
+.strip strong{display:block;font-family:var(--display);font-weight:700;font-size:17px}
+.strip span{font-size:15px;color:var(--muted)}
+
+/* marquee */
+.ticker{direction:ltr;overflow:hidden;background:var(--navy);color:#fff;padding-block:16px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.ticker div{display:flex;width:max-content;animation:tick 38s linear infinite}
+.ticker:hover div{animation-play-state:paused}
+.ticker ul{display:flex;gap:44px;padding-inline-end:44px;font-family:var(--mono);font-size:14px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+html[lang="ar"] .ticker ul{font-family:var(--body);letter-spacing:0;font-size:16px}
+.ticker li{display:flex;align-items:center;gap:44px}
+.ticker li::after{content:"";width:8px;height:8px;border-radius:2px;background:var(--blue);transform:rotate(45deg)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* reveal */
+.js .rv{opacity:0;transform:perspective(900px) translateY(34px) rotateX(10deg);transform-origin:50% 100%}
+.js .rv.in{opacity:1;transform:none;transition:opacity .8s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s)}
+
+/* tilt cards */
+.tilt{position:relative;transform-style:preserve-3d;transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateZ(0);transition:transform .5s var(--ease),box-shadow .4s,border-color .3s,background .3s}
+.tilt.live{transition:transform .08s linear,box-shadow .4s,border-color .3s,background .3s}
+.tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(420px circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.75),rgba(255,255,255,0) 55%);opacity:0;transition:opacity .35s;mix-blend-mode:soft-light}
+.tilt:hover::after{opacity:1}
+.pop{transform:translateZ(0);transition:transform .5s var(--ease)}
+.tilt:hover .pop{transform:translateZ(38px)}
+.tilt:hover .pop.far{transform:translateZ(60px)}
+
+/* platform */
+.platform .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,80px);margin-top:56px;align-items:start}
+.cycle{position:sticky;top:110px;display:flex;flex-direction:column;align-items:center;gap:18px}
+.pie{position:relative;width:min(420px,82vw);aspect-ratio:1;perspective:1100px}
+.pie-rig{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(54deg) rotateZ(-18deg);will-change:transform}
+.sl{position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none;transition:transform .7s var(--ease);transform:translate3d(calc(var(--bx)*6px),calc(var(--by)*6px),0)}
+.sl svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.sl path{transition:fill .45s}
+.sl .top{pointer-events:auto;cursor:pointer;fill:var(--sky-deep)}
+.sl .side{fill:var(--blue)}
+.sl.on{transform:translate3d(calc(var(--bx)*26px),calc(var(--by)*26px),54px)}
+.sl.on .top{fill:var(--navy-2)}
+.sl.on .side{fill:#072746}
+.pie-floor{position:absolute;inset:16%;border-radius:50%;background:radial-gradient(closest-side,rgba(11,42,74,.34),rgba(11,42,74,0));transform:translateZ(-70px);filter:blur(10px)}
+.cap{display:flex;align-items:baseline;gap:12px;min-height:34px;font-family:var(--display);font-weight:700;font-size:20px;text-align:center}
+.cap b{font:500 14px var(--mono);color:var(--muted)}
+.cap span{display:inline-block;animation:capin .5s var(--ease)}
+@keyframes capin{from{opacity:0;transform:translateY(10px)}}
+.mods{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.mod{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 18px;padding:24px 26px;border:1px solid var(--line);border-radius:14px;background:var(--white);cursor:default}
+.mod .n{grid-row:span 2;font:500 14px/1 var(--mono);color:var(--muted);padding-top:7px;transition:color .3s}
+.mod h3{font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:-.01em}
+.mod p{grid-column:2;color:var(--muted);font-size:16px}
+.mod.on{background:var(--mist);border-color:var(--blue);box-shadow:0 26px 50px -30px rgba(11,58,102,.55)}
+.mod.on .n{color:var(--navy-2)}
+.mod::before{content:"";position:absolute;inset-block:18px;inset-inline-start:-1px;width:3px;border-radius:3px;background:var(--navy-2);transform:scaleY(0);transition:transform .45s var(--ease)}
+.mod.on::before{transform:scaleY(1)}
+@media (max-width:900px){.platform .grid{grid-template-columns:minmax(0,1fr)}.cycle{position:static}.pie{width:min(320px,74vw)}}
+
+/* why */
+.why{background:var(--mist);border-block:1px solid var(--line)}
+.why .wrap{display:flex;flex-wrap:wrap;gap:56px}
+.why .head{flex:1 1 340px;min-width:0;align-self:flex-start;position:sticky;top:110px}
+.why ul{flex:999 1 520px;min-width:0}
+.why li{position:relative;display:flex;gap:20px;padding:26px 18px;border-top:1px solid var(--line);overflow:hidden;transition:padding .45s var(--ease)}
+.why li:last-child{border-bottom:1px solid var(--line)}
+.why li::before{content:"";position:absolute;inset:0;background:var(--white);transform:scaleX(0);transform-origin:0 50%;transition:transform .55s var(--ease)}
+html[dir="rtl"] .why li::before{transform-origin:100% 50%}
+.why li:hover::before{transform:scaleX(1)}
+.why li:hover{padding-inline-start:30px}
+.why li>*{position:relative}
+.tick{flex:none;width:34px;height:34px;border-radius:50%;background:var(--sky);display:grid;place-items:center;transition:background .35s,transform .5s var(--ease)}
+.tick svg{width:18px;height:18px;fill:none;stroke:var(--navy-2);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:24;stroke-dashoffset:24;transition:stroke .35s}
+.in .tick svg,.why li.in .tick svg{animation:draw .7s .25s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.why li:hover .tick{background:var(--navy-2);transform:rotate(360deg)}
+.why li:hover .tick svg{stroke:#fff}
+.why h3{font-family:var(--display);font-weight:700;font-size:20px}
+.why li p{color:var(--muted)}
+@media (max-width:900px){.why .head{position:static}}
+
+/* sectors */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:18px;margin-top:44px}
+.sector{display:flex;flex-direction:column;gap:22px;min-height:178px;padding:26px;border:1px solid var(--line);border-radius:14px;background:var(--white)}
+.sector:hover{border-color:var(--blue);box-shadow:0 30px 54px -32px rgba(11,58,102,.6)}
+.ico{width:52px;height:52px;border-radius:13px;background:var(--sky);display:grid;place-items:center;transition:background .35s}
+.ico svg{width:26px;height:26px;fill:none;stroke:var(--navy-2);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .35s}
+.sector:hover .ico{background:var(--navy-2)}
+.sector:hover .ico svg{stroke:#fff}
+.sector h3{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.25;margin-top:auto}
+.sector.other{border-style:dashed;border-color:#8AA3B8;background:var(--mist)}
+.sector.other span{font-size:15px;color:var(--muted);margin-top:-14px}
+
+/* expertise */
+.expert{background:var(--sky);overflow:hidden}
+.expert .wrap{display:flex;flex-wrap:wrap;gap:clamp(32px,6vw,72px);align-items:center}
+.years{flex:0 1 340px;min-width:0;perspective:900px}
+.years .card{display:flex;flex-direction:column;gap:6px;padding:34px;border-radius:20px;background:var(--white);border:1px solid #fff;box-shadow:0 40px 70px -40px rgba(11,42,74,.6)}
+.big{font-family:var(--display);font-weight:800;font-size:clamp(96px,13vw,150px);line-height:.9;letter-spacing:-.05em;color:var(--navy-2);font-variant-numeric:tabular-nums;text-shadow:1px 1px 0 #8CC4EE,2px 2px 0 #8CC4EE,3px 3px 0 #8CC4EE,4px 4px 0 #8CC4EE,5px 5px 0 #8CC4EE,6px 6px 0 #8CC4EE,7px 7px 0 #BFE0F7,8px 8px 0 #BFE0F7}
+.years small{font-size:16px;color:var(--muted);font-weight:500}
+.who{display:flex;align-items:center;gap:14px;margin-top:20px;padding-top:20px;border-top:1px solid var(--line)}
+.coin{flex:none;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--navy-2);color:#fff;font:700 18px var(--display);transition:transform .9s var(--ease)}
+.card:hover .coin{transform:rotateY(360deg)}
+.who strong{display:block;font-family:var(--display);font-weight:700;font-size:18px}
+.who span{font-size:14px;color:var(--muted)}
+.expert .copy{flex:999 1 500px;min-width:0;display:flex;flex-direction:column;gap:22px}
+.expert .lead{color:var(--muted)}
+.duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:22px 40px;padding-top:22px;border-top:1px solid var(--sky-deep)}
+.duo strong{display:block;font-family:var(--display);font-weight:700;font-size:17px}
+.duo span{font-size:15px;color:var(--muted)}
+
+/* security */
+.sec{display:flex;flex-direction:column;gap:12px;padding:30px;border:1px solid var(--line);border-radius:14px;background:var(--white)}
+.sec:hover{border-color:var(--blue);box-shadow:0 30px 54px -32px rgba(11,58,102,.6)}
+.badge{align-self:flex-start;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:6px 9px;border-radius:5px;background:var(--navy-2);color:#fff}
+.badge.soft{background:none;border:1px solid var(--muted);color:var(--muted);padding:5px 9px}
+html[lang="ar"] .badge{font-family:var(--body);letter-spacing:0;font-size:13px}
+.sec h3{font-family:var(--display);font-weight:700;font-size:22px}
+.sec p{color:var(--muted)}
+.sec .ico{margin-bottom:6px}
+
+/* demo */
+.demo{background:var(--sky);overflow:hidden}
+.demo .wrap{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:56px;align-items:center}
+.demo .copy{flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.demo h2{font-size:clamp(34px,4.6vw,58px)}
+.contact{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding-top:10px;font-weight:500;font-size:18px}
+form{flex:1 1 440px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:18px;padding:clamp(24px,4vw,40px);border-radius:20px;background:var(--white);border:1px solid #fff;box-shadow:0 50px 90px -50px rgba(11,42,74,.65)}
+.field{position:relative}
+.field input{width:100%;height:58px;padding:22px 14px 6px;border:1px solid var(--line);border-radius:10px;background:var(--mist);color:var(--navy);font:400 16px var(--body);transition:border-color .25s,box-shadow .3s,background .25s}
+.field label{position:absolute;inset-inline-start:15px;top:18px;font-size:16px;color:var(--muted);pointer-events:none;transform-origin:0 0;transition:transform .25s var(--ease),color .25s}
+html[dir="rtl"] .field label{transform-origin:100% 0}
+.field input:focus{outline:0;border-color:var(--navy-2);background:#fff;box-shadow:0 0 0 4px rgba(140,196,238,.45)}
+.field input:focus+label,.field input:not(:placeholder-shown)+label{transform:translateY(-12px) scale(.78);color:var(--navy-2)}
+form .btn{grid-column:1/-1;width:100%}
+.status{grid-column:1/-1;font-size:15px;color:var(--muted);min-height:1.4em}
+
+/* footer */
+footer{background:var(--mist);border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;padding-block:34px}
+footer .mark{display:flex;align-items:center;gap:14px}
+footer svg{width:34px;height:34px;flex:none}
+.top{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:500;color:var(--navy);padding:10px 0}
+.top svg{width:16px;height:16px;transition:transform .35s var(--ease)}
+.top:hover svg{transform:translateY(-4px)}
+[dir="ltr"]{unicode-bidi:isolate}
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
