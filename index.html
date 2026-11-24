@@ -320,6 +320,11 @@ html[lang="ar"] .who-tag{font-family:var(--body);letter-spacing:0;font-size:13px
 .btn.wa:hover{background:#177a42}
 .btn.wa svg{width:20px;height:20px}
 .btn.wa:hover svg,html[dir="rtl"] .btn.wa svg,html[dir="rtl"] .btn.wa:hover svg{transform:none}
+.extras{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:16px;margin-top:40px}
+.extras>div{display:flex;flex-direction:column;gap:4px;padding:20px 24px;border:1px dashed var(--blue);border-radius:14px;background:var(--mist);transition:background .3s,border-color .3s}
+.extras>div:hover{background:var(--sky);border-color:var(--navy-2)}
+.extras strong{font-family:var(--display);font-weight:700;font-size:17px}
+.extras span{font-size:15px;color:var(--muted)}
 .next{grid-column:1/-1;font-size:15px;color:var(--navy-2);font-weight:500;margin-top:-4px}
 
 
@@ -413,14 +418,15 @@ html[lang="ar"] .who-tag{font-family:var(--body);letter-spacing:0;font-size:13px
 <p class="cap" id="cap" aria-live="polite"></p>
 </div>
 <ol class="mods" id="mods">
-<li class="rv"><article class="mod tilt" tabindex="0"><span class="n">01</span><h3 class="pop" data-i="m1t">Audit planning</h3><p data-i="m1d">Build a risk-based annual audit plan, scope each engagement, and allocate resources across the audit universe.</p><span class="gias" data-i="g1">GIAS · Standard 9.4</span></article></li>
+<li class="rv"><article class="mod tilt" tabindex="0"><span class="n">01</span><h3 class="pop" data-i="m1t">Risk-based audit planning</h3><p data-i="m1d">Build a risk-based annual audit plan, scope each engagement, and allocate resources across the audit universe.</p><span class="gias" data-i="g1">GIAS · Standard 9.4</span></article></li>
 <li class="rv"><article class="mod tilt" tabindex="0"><span class="n">02</span><h3 class="pop" data-i="m2t">Risk and control assessment</h3><p data-i="m2d">Assess inherent and residual risk, and evaluate control design and operating effectiveness, consistently across every engagement.</p><span class="gias" data-i="g2">GIAS · Standard 13.2</span></article></li>
-<li class="rv"><article class="mod tilt" tabindex="0"><span class="n">03</span><h3 class="pop" data-i="m3t">Fieldwork, sampling and analytics</h3><p data-i="m3d">Execute audit programmes, draw samples, and analyse data. Every working paper and piece of evidence stays linked to its engagement, with a clear review trail.</p><span class="gias" data-i="g3">GIAS · Principle 14</span></article></li>
+<li class="rv"><article class="mod tilt" tabindex="0"><span class="n">03</span><h3 class="pop" data-i="m3t">Audit execution and documentation</h3><p data-i="m3d">Execute audit programmes, draw samples, and analyse data. Every working paper and piece of evidence stays linked to its engagement, with a clear review trail.</p><span class="gias" data-i="g3">GIAS · Principle 14</span></article></li>
 <li class="rv"><article class="mod tilt" tabindex="0"><span class="n">04</span><h3 class="pop" data-i="m4t">Findings</h3><p data-i="m4d">Document each observation once, with its risk rating, root cause, owner, and agreed management action plan.</p><span class="gias" data-i="g4">GIAS · Principle 14</span></article></li>
 <li class="rv"><article class="mod tilt" tabindex="0"><span class="n">05</span><h3 class="pop" data-i="m5t">Corrective-action follow-up</h3><p data-i="m5d">Track every management action through to closure, with clear ownership, due dates, and status.</p><span class="gias" data-i="g5">GIAS · Standard 15.2</span></article></li>
-<li class="rv"><article class="mod tilt" tabindex="0"><span class="n">06</span><h3 class="pop" data-i="m6t">Reporting and dashboards</h3><p data-i="m6d">Give senior management and the audit committee real-time visibility of audit coverage, open findings, and action status.</p><span class="gias" data-i="g6">GIAS · Standard 15.1</span></article></li>
+<li class="rv"><article class="mod tilt" tabindex="0"><span class="n">06</span><h3 class="pop" data-i="m6t">Automated reporting and interactive dashboards</h3><p data-i="m6d">Reports are generated from the work already in the system, and interactive dashboards give senior management and the audit committee real-time KPIs on coverage, open findings, and action status.</p><span class="gias" data-i="g6">GIAS · Standard 15.1</span></article></li>
 </ol>
 </div>
+<div class="extras rv"><div><strong data-i="xb1t">Your company's branding</strong><span data-i="xb1d">Customise AUDITool with your own company identity.</span></div><div><strong data-i="xb2t">Comprehensive user guide</strong><span data-i="xb2d">A full guide that takes every user through the system step by step.</span></div></div>
 </div>
 </section>
 
@@ -445,6 +451,7 @@ html[lang="ar"] .who-tag{font-family:var(--body);letter-spacing:0;font-size:13px
 <div class="head rv">
 <p class="eyebrow" data-i="x_eye">Who it is for</p>
 <h2 data-i="x_h">For companies looking to take total control of every audit, start to finish.</h2>
+<p class="lead" data-i="x_p">Designed for internal auditors, audit managers, and Chief Audit Executives.</p>
 </div>
 <ul class="cards">
 <li class="rv"><article class="sector tilt"><span class="ico pop far"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></svg></span><h3 class="pop" data-i="x1">Non-banking financial institutions</h3><p data-i="x1d">Credit, collections and compliance testing for FRA-regulated activities.</p></article></li>
@@ -613,7 +620,7 @@ h1:'من الخطة السنوية حتى إغلاق آخر إجراء، <mark>�
 s1t:'بالعربية والإنجليزية',s1d:'واجهة كاملة من اليمين إلى اليسار',s2t:'استضافة داخل مصر',s2d:'بيانات المراجعة لا تغادر البلاد',s3t:'المعايير العالمية للمراجعة الداخلية',s3d:'مبني على إصدار 2024 من معهد المراجعين الداخليين',s4t:'تشغيل خلال أسبوعين تقريبًا',s4d:'التطبيق مشمول في السعر',
 t4:'العينات الإحصائية',t7:'المعايير العالمية للمراجعة الداخلية',
 p_p:'ست مراحل تتوزع عادةً بين جداول منفصلة ومجلدات مشتركة ورسائل بريد. AUDITool يديرها كمسار عمل واحد موحّد يمكن تتبّعه، ومربوط بالمعايير العالمية للمراجعة الداخلية الصادرة عن معهد المراجعين الداخليين (2024).',
-m3t:'العمل الميداني والعينات والتحليل',m3d:'نفّذ برامج المراجعة، واسحب العينات، وحلّل البيانات. وتبقى كل ورقة عمل وكل دليل إثبات مرتبطة بمهمتها، مع مسار واضح للمراجعة والاعتماد.',
+m3t:'تنفيذ المراجعة والتوثيق',m3d:'نفّذ برامج المراجعة، واسحب العينات، وحلّل البيانات. وتبقى كل ورقة عمل وكل دليل إثبات مرتبطة بمهمتها، مع مسار واضح للمراجعة والاعتماد.',
 g1:'المعايير العالمية · المعيار 9.4',g2:'المعايير العالمية · المعيار 13.2',g3:'المعايير العالمية · المبدأ 14',g4:'المعايير العالمية · المبدأ 14',g5:'المعايير العالمية · المعيار 15.2',g6:'المعايير العالمية · المعيار 15.1',
 w1t:'عربي في الأصل، لا ترجمة',w1d:'واجهتان عربية وإنجليزية بتخطيط سليم من اليمين إلى اليسار، ليعمل كل مراجع باللغة التي يكتب بها تقاريره.',
 w2t:'ملفات Excel الحالية تنتقل معك',w2d:'ننقل خطط المراجعة وسجلات المخاطر والملاحظات الحالية إلى AUDITool أثناء التطبيق، فتبدأ ببياناتك أنت لا بنظام فارغ.',
@@ -637,6 +644,7 @@ q3:'هل يدعم سحب العينات وتحليل البيانات؟',a3:'ن�
 q4:'هل يتكامل مع نظام ERP أو Active Directory لدينا؟',a4:'ليس حاليًا. يعمل AUDITool نظامًا مستقلًا لا يحتاج إلى ربط بنظام ERP، ما يختصر مراجعة إدارة تقنية المعلومات.',
 q5:'هل يمكن تنفيذ العمل الميداني دون اتصال أو من الهاتف؟',a5:'ليس بعد. يعمل AUDITool من المتصفح على الحاسوب المكتبي أو المحمول، ويحتاج إلى اتصال بالإنترنت.',
 q6:'هل AUDITool حاصل على شهادة ISO 27001؟',a6:'ليس بعد. الضوابط المذكورة في قسم الأمان معمول بها اليوم، ونستعرضها بالتفصيل مع فريق تقنية المعلومات لديكم.',
+m1t:'تخطيط المراجعة المبني على المخاطر',m6t:'تقارير آلية ولوحات متابعة تفاعلية',m6d:'تُعدّ التقارير تلقائيًا من العمل المنجز داخل النظام، وتمنح لوحات المتابعة التفاعلية الإدارة العليا ولجنة المراجعة مؤشرات أداء لحظية عن التغطية والملاحظات المفتوحة وحالة الإجراءات.',xb1t:'هوية شركتك',xb1d:'خصّص AUDITool بهوية شركتك.',xb2t:'دليل استخدام شامل',xb2d:'دليل كامل يأخذ كل مستخدم في جولة على النظام خطوة بخطوة.',x_p:'مصمَّم للمراجعين الداخليين ومديري المراجعة ورؤساء المراجعة الداخلية.',
 wa:'تواصل عبر واتساب',next:'نرد خلال يوم عمل واحد لتحديد موعد يناسب فريقك.',
 foot:'AUDITool أحد منتجات <span dir="ltr">3D-Pi Integrated Solutions LLC</span>.',totop:'العودة إلى الأعلى'
 };
