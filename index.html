@@ -836,10 +836,10 @@ $('#form').addEventListener('submit',function(e){
   if(!v('name')||!v('company')||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))){st.textContent=MSG[lang].need;return}
   if(v('_honey'))return;
   btn.disabled=true;st.textContent=MSG[lang].sending;
-  fetch('https://formsubmit.co/ajax/hello@3d-pi.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({
-    _subject:'AUDITool demo request: '+v('company'),_template:'table',_replyto:v('email'),_captcha:'false',
-    'Full name':v('name'),'Job title':v('title'),'Company':v('company'),'Sector':v('sector'),'Work email':v('email'),'Phone':v('phone'),'Page language':lang})})
-  .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)!=='true')throw 0})})
+  fetch('https://formspree.io/f/mvkadldz',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({
+    _subject:'AUDITool demo request: '+v('company'),email:v('email'),
+    'Full name':v('name'),'Job title':v('title'),'Company':v('company'),'Sector':v('sector'),'Phone':v('phone'),'Page language':lang})})
+  .then(function(r){if(!r.ok)throw 0})
   .then(function(){f.classList.add('sent');st.textContent='';$('#done').hidden=false;$('#done').focus()})
   .catch(function(){btn.disabled=false;st.textContent=MSG[lang].fail});
 });
