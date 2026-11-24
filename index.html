@@ -265,7 +265,7 @@ html[lang="ar"] .badge{font-family:var(--body);letter-spacing:0;font-size:13px}
 .demo .copy{flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:20px}
 .demo h2{font-size:clamp(34px,4.6vw,58px)}
 .contact{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding-top:10px;font-weight:500;font-size:18px}
-form{flex:1 1 440px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:18px;padding:clamp(24px,4vw,40px);border-radius:20px;background:var(--white);border:1px solid #fff;box-shadow:0 50px 90px -50px rgba(11,42,74,.65)}
+form{position:relative;flex:1 1 440px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:18px;padding:clamp(24px,4vw,40px);border-radius:20px;background:var(--white);border:1px solid #fff;box-shadow:0 50px 90px -50px rgba(11,42,74,.65)}
 .field{position:relative}
 .field input{width:100%;height:58px;padding:22px 14px 6px;border:1px solid var(--line);border-radius:10px;background:var(--mist);color:var(--navy);font:400 16px var(--body);transition:border-color .25s,box-shadow .3s,background .25s}
 .field label{position:absolute;inset-inline-start:15px;top:18px;font-size:16px;color:var(--muted);pointer-events:none;transform-origin:0 0;transition:transform .25s var(--ease),color .25s}
@@ -325,6 +325,21 @@ html[lang="ar"] .who-tag{font-family:var(--body);letter-spacing:0;font-size:13px
 .extras>div:hover{background:var(--sky);border-color:var(--navy-2)}
 .extras strong{font-family:var(--display);font-weight:700;font-size:17px}
 .extras span{font-size:15px;color:var(--muted)}
+.logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:18px;margin-top:40px}
+.logos>li{display:flex}
+.logo-card{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:200px;padding:28px;border:1px solid var(--line);border-radius:14px;background:var(--white);text-align:center}
+.logo-card:hover{border-color:var(--blue);box-shadow:0 30px 54px -32px rgba(11,58,102,.6)}
+.logo-card img{width:auto;max-width:200px;object-fit:contain}
+.logo-card strong{display:block;font-family:var(--display);font-weight:700;font-size:17px}
+.logo-card span{font-size:14px;color:var(--muted)}
+form.sent>:not(.done){display:none}
+.done{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:36px 8px;outline:0;animation:rise .6s var(--ease)}
+.done[hidden]{display:none}
+.done-ico{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--navy-2);box-shadow:0 14px 30px -12px rgba(11,58,102,.7);animation:pop .6s var(--ease)}
+.done-ico svg{width:32px;height:32px;fill:none;stroke:#fff;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:24;stroke-dashoffset:24;animation:draw .6s .3s var(--ease) forwards}
+@keyframes pop{from{transform:scale(.4);opacity:0}}
+.done strong{font-family:var(--display);font-weight:700;font-size:24px;color:var(--navy)}
+.done span{color:var(--muted);max-width:34em}
 .next{grid-column:1/-1;font-size:15px;color:var(--navy-2);font-weight:500;margin-top:-4px}
 
 
@@ -348,6 +363,7 @@ html[lang="ar"] .who-tag{font-family:var(--body);letter-spacing:0;font-size:13px
 <nav aria-label="Primary"><ul>
 <li><a href="#platform" data-i="nav1">Platform</a></li>
 <li><a href="#sectors" data-i="nav3">Sectors</a></li>
+<li><a href="#customers" data-i="nav7">Customers</a></li>
 <li><a href="#security" data-i="nav5">Security</a></li>
 <li><a href="#expertise" data-i="nav4">Expertise</a></li>
 <li><a href="#faq" data-i="nav6">FAQ</a></li>
@@ -426,7 +442,7 @@ html[lang="ar"] .who-tag{font-family:var(--body);letter-spacing:0;font-size:13px
 <li class="rv"><article class="mod tilt" tabindex="0"><span class="n">06</span><h3 class="pop" data-i="m6t">Automated reporting and interactive dashboards</h3><p data-i="m6d">Reports are generated from the work already in the system, and interactive dashboards give senior management and the audit committee real-time KPIs on coverage, open findings, and action status.</p><span class="gias" data-i="g6">GIAS · Standard 15.1</span></article></li>
 </ol>
 </div>
-<div class="extras rv"><div><strong data-i="xb1t">Your company's branding</strong><span data-i="xb1d">Customise AUDITool with your own company identity.</span></div><div><strong data-i="xb2t">Comprehensive user guide</strong><span data-i="xb2d">A full guide that takes every user through the system step by step.</span></div></div>
+<div class="extras rv"><div><strong data-i="xb2t">Comprehensive user guide</strong><span data-i="xb2d">A full guide that takes every user through the system step by step.</span></div></div>
 </div>
 </section>
 
@@ -438,7 +454,7 @@ html[lang="ar"] .who-tag{font-family:var(--body);letter-spacing:0;font-size:13px
 <p class="lead" data-i="w_p">Audit functions here usually choose between spreadsheets that stop scaling and international platforms designed for other markets. AUDITool is the third option: enterprise-grade audit management, built locally.</p>
 </div>
 <ul>
-<li class="rv"><span class="tick"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><div><h3 data-i="w1t">Arabic-first, not translated</h3><p data-i="w1d">Arabic and English interfaces with a proper right-to-left layout, so every auditor works in the language they report in.</p></div></li>
+<li class="rv"><span class="tick"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><div><h3 data-i="w1t">Available in both English and Arabic</h3><p data-i="w1d">Arabic and English interfaces with a proper right-to-left layout, so every auditor works in the language they report in.</p></div></li>
 <li class="rv"><span class="tick"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><div><h3 data-i="w2t">Your Excel history comes with you</h3><p data-i="w2d">Existing plans, risk registers and findings are brought into AUDITool during implementation, so you start with your own data, not a blank system.</p></div></li>
 <li class="rv"><span class="tick"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><div><h3 data-i="w3t">Sampling and analytics built in</h3><p data-i="w3d">Draw samples and analyse data inside the engagement, so the evidence and the conclusion sit in the same file.</p></div></li>
 <li class="rv"><span class="tick"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><div><h3 data-i="w4t">One price, implementation included</h3><p data-i="w4d">Licence and implementation are quoted together, with no separate consulting project before you can start.</p></div></li>
@@ -460,6 +476,20 @@ html[lang="ar"] .who-tag{font-family:var(--body);letter-spacing:0;font-size:13px
 <li class="rv" style="--d:.18s"><article class="sector tilt"><span class="ico pop far"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10L20 7H7"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg></span><h3 class="pop" data-i="x4">FMCG</h3><p data-i="x4d">Distribution networks, trade spend, stock counts and branch audits.</p></article></li>
 <li class="rv" style="--d:.24s"><article class="sector tilt"><span class="ico pop far"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 8h14M14 4l4 4-4 4M20 16H6M10 12l-4 4 4 4"/></svg></span><h3 class="pop" data-i="x5">Trading companies</h3><p data-i="x5d">Purchasing, pricing, credit limits and stock movement between branches.</p></article></li>
 <li class="rv" style="--d:.3s"><article class="sector other tilt"><span class="ico pop far"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span><h3 class="pop" data-i="x6">Other sectors</h3><p data-i="x6d">The methodology follows the Standards, not one industry. Talk to us about yours.</p></article></li>
+</ul>
+</div>
+</section>
+
+<section class="band trust" id="customers">
+<div class="wrap">
+<div class="head rv">
+<p class="eyebrow" data-i="u_eye">Early users</p>
+<h2 data-i="u_h">Companies that use and trust AUDITool.</h2>
+</div>
+<ul class="logos">
+<li class="rv"><article class="logo-card tilt"><img class="pop" src="data:image/webp;base64,UklGRugEAABXRUJQVlA4WAoAAAAQAAAAXQAAJQAAQUxQSJQEAAABoL/+//o23tqzZLgvYdYSOhLKytzdyLw9DyXHtGS4W5m7tJPO3d3d3bce3bm7u7vf64fP5/vN99KImABKZLmqKdD+EF7OH0JJrtY2SOmdxzOhQTTnlBdTYrklKRUYor0dMkJ0mjSkiQf53VZRcjMAhimKubdvbxLPvRmtbatVOfkyANI0yT8qF0Zez8JDzU3H2mQUSV87xfjkhzToBSo4A8u6DIH83L7QLT4+yJ3PYH/O0Rij1IJBHdYkVw1MxYFR3F1TcIg/t0Tf9mlOThey1ff8opBC/D3Dr9J8FifvnfFnayfUNT48y+eZ/Y1+0LdvDXVQheKi0j+u7/szUErRrD87XHqDIeKNRaz5hgbKi1fzucoqluPW8P+xZiJtd6a+M/9OYXr+00Nu0u0UpFd8Lv1oIau2Mqew0591w3tW1oi8AX5cTpXO5w2LTl0p844nQQuFnZaFeYpWYQhGgAa+alChfiZU7Ar1azUvRdVIOQLV/DgH/1YBjplfSlLUg4CtJGZJ9bHHVrVigSTFEyPdVr9CZcDfIHk6SDUwH/1AZ0NAL0lqkBjpFSA1DcfKSSNNBWgxbqk+xJoj6RsPXHerSNLulABiMYoVsXFQUm9vam8R8Ic0dY0mJof0CtBkDPWkoAOS3vbg0ZN/SIK47M2TIVvaD6yB9VJpp5OSPOA1WVo45CfDJGkntH0K/pRwbi4p4kGRjeu2YDLMl4phSmWQKyTle1Ds4LNsJxknSYJDJPS3VOjBCw6clxQnKRtIejlzb2I3pf1G6nZNKvebdvmN55zyf1kEKTZfgfTfxVUBh9jdQZHt0tF6Fq5K0hFISWCpdAoYJR2CLEm9gOtO5tbvLG0kfQh79Y/lrlQE2ZIWWTj/22vZ+wFJPhcjpTPQTxKAJAEvOGWckSQjJEkgSceBiCRdAkmaZTGjUEFSwMUY6SBIesHVi04V5fS3pDyyDQFRQ7bXXPSqB5KCLvKkjWyRNMPVQyecciUJUo03gVRju+0DF2lPWUIu1krjkKQ8IFfSD8ALHnxs44ik5gDZ/2nIYJ/lDRfkW8IuXpGClY1xwIeS0oC7HkjSLwC1u+LsexHLh24Cy4x0F5Lo4rBMKsR8mFjAeNtw/ccZ22tuGDRFUpqrK0SNuYzSIoBOnnQ15PS40UoK295zxSpJpZyiUoC+xq3IIqyj4FZiGQn0A+ZKv2B7xx2ScN6pl6GuoZXYt8OLiZW1tHGIwSlJOQ5vJvSnCykE5SxbbU/E4JnEsOy3NZ/KfEnC4eOEnpsbs83QVoAXDDW1qCwUebDWULblxUHI3cuQ4SIgQYczgwNQWd9hLrNoJMT0EG+wqACa/PcH4QQ+gBbQ5brsRQD+6TljpBgZvedM7VdksQIUezHKYu1NwOKHJwxRoy2h39658ptFeiM301f5qH6LNO/apG0aUOxU1zPynQYAZw0Ny8uZZejHGqwcBzBfb8t5Lm5nfGzsKgvQ6UWjIAVGWZ4y6Pqc8VwDzFXGj4NgqaSfmwJt5j5z6mQcwj3mXrl+ZFwGiQZCYRx9QEWA0gApOJZODeIyLdOHNd0PAFZQOCAuAAAAsAMAnQEqXgAmAD6dTqNNpaQjIiHIALATiWkAAA21jQe7MUBcGgAA/vWygAAAAA==" alt="Delica Chocolate" height="70"><div><strong>Delica Chocolate</strong><span data-i="u1">Industrial sector</span></div></article></li>
+<li class="rv" style="--d:.08s"><article class="logo-card tilt"><img class="pop" src="data:image/webp;base64,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" alt="Take 5" height="56"><div><strong>Take 5</strong><span data-i="u2">Retail sector</span></div></article></li>
+<li class="rv" style="--d:.16s"><article class="logo-card tilt"><img class="pop" src="data:image/webp;base64,UklGRjQEAABXRUJQVlA4WAoAAAAQAAAATwAARQAAQUxQSMcDAAABoV2I6H+ohtq2bYckZ23bNj/Ftm3btm3btm3btm3byQZVXTVHv/MDrpj30TEqd6yObUVMwASUSdJBraoRyiJMId1mHS/2QcoVzYGwZ1LHzdKMakm1PCwcUc5e7kTqap7JHISFyiv6eg/IUWynOitSMCivrBjsB13nFiSc0tJeI2qLlHISWTFWkqgjFM42qfMk2MSzlIL9ao+EfVlUU30ARlZeWMmMAB3vWEmgElIb5YkFKKvAdyJ3V91kDzE4RWo5UfpC4WqnMLmf2VErBO/bTW9rCQa2nyrCK6u2hkhYHNn3v1oGskwR45KzSkJQuMhWkpS6TU3gVSPHObvBZxcL7d/FkXJLEwntJiupIsXaZhDapr5vAB4WJ3OPv24U2t2oTLIk26aPzwl+bP/WVZDI5IJBby/kOqH90hUpp7Cx0PY0va8NGMqyrI+eOlFoi+isGttEhQtXuwqh/8h771EWCMDOivd7zmHp31k9Y+KF0efbW9w7QVW0h6GR9nJ9+zWod4YzvXoyKMs5+nhnB+sqBAVPVvIQEzUCP/44wWfd/SipDCwoiEx5IsAyj1/sMqmmsZyvLQwiyOwCb14kzSreJ+wXmyBtG081l1EolJAilhEuCckU3j5JqtK5X6/VYAklMigvlGVA4RpbukKiZg72IsFvZVIPStLUgX4O7/OHkfj7YVSFsYXzyICwEOImPz0kWan9/JR+NooRjpGRUcSyACeRyitHjrHu99dbn6Qaw44I+7V9peptW63ZLsuAMKCIBZYVY1lYjlEyXeIF0rf0dNaHTZ4KbITBCHy5a5VA/v9RnmUAWRTrusMvgb08vxFUYGIFguPMI7CvTlMfKafWU2DvvTSKigyOkdEP5woMnv/1F4Nj8ON3I/wPe3iPWBmyz08V3JMrm1gxLrawoeCe78d7JB9ccFrUv88DBmS41waCYxffFUn6OME3MZjqHgCKGLjHEUIrfjAZUn4Q3MZIW0VotDam+jBGEqDbbCc4VkJJ1zSFd3FeyYDAWM7hw2QPyjWhLVAa3m8IR8r165aaKg0udSsSvthKOQ+zIoo4IpxIMU4mjOMk9XG+f3LVoAc8hKQWFpBLEcDIoDgLsDAC/AsJP1zCE9gIAzLIwsjIMcgysrAwIIMMskxUutwiTpKrb8fIKA0n8n6upjbQHyUQTiCcB47I2WuHIOHXjVSAcuS3AYpCwF3+z1Fs5o8+Hkaw5l5XI+WTi5jckybgsj5f1upSPH+4Xgh8cKQdwwwaymxwjIywjIwwMrIwMjKywDLIAuxbrCcZAFZQOCBGAAAAMAQAnQEqUABGAD6dTqNNpaQjIiFIALATiWkA1jAEPdq1atWrVq1atWkAAP7yqX/VlqIcj/4Nkimxx7Uf7OyCRLKqGAAAAA==" alt="SolidForms" height="64"><div><strong>SolidForms</strong><span data-i="u3">Manufacturing sector</span></div></article></li>
 </ul>
 </div>
 </section>
@@ -559,6 +589,8 @@ html[lang="ar"] .who-tag{font-family:var(--body);letter-spacing:0;font-size:13px
 <button class="btn lg magnet" type="submit"><span data-i="cta">Book a demo</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
 <p class="next" data-i="next">We reply within one business day to arrange a time that suits your team.</p>
 <p class="status" id="status" role="status"></p>
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+<div class="done" id="done" tabindex="-1" role="status" hidden><span class="done-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><strong data-i="ok_t">Demo requested successfully</strong><span data-i="ok_d">Thank you. We will reply within one business day to arrange a time that suits your team.</span></div>
 </form>
 </div>
 </section>
@@ -615,14 +647,14 @@ k2b:'قريبًا',k2t:'على خوادم الشركة',k2d:'للمؤسسات ا
 k3b:'مضمون',k3t:'السرّية',k3d:'بيانات المراجعة محمية وتبقى في سرّية تامة.',
 d_h:'شاهد AUDITool على خطة المراجعة الخاصة بك.',d_p:'احجز عرضًا توضيحيًا، ونستعرض مع فريقك مهمة مراجعة كاملة داخل النظام، من التخطيط حتى المتابعة.',
 f1:'الاسم الكامل',f2:'المسمّى الوظيفي',f3:'الشركة',f4:'القطاع',f5:'البريد الإلكتروني للعمل',f6:'رقم الهاتف',
-nav6:'الأسئلة الشائعة',
+nav6:'الأسئلة الشائعة',nav7:'العملاء',
 h1:'من الخطة السنوية حتى إغلاق آخر إجراء، <mark>في نظام واحد.</mark>',
 s1t:'بالعربية والإنجليزية',s1d:'واجهة كاملة من اليمين إلى اليسار',s2t:'استضافة داخل مصر',s2d:'بيانات المراجعة لا تغادر البلاد',s3t:'المعايير العالمية للمراجعة الداخلية',s3d:'مبني على إصدار 2024 من معهد المراجعين الداخليين',s4t:'تشغيل خلال أسبوعين تقريبًا',s4d:'التطبيق مشمول في السعر',
 t4:'العينات الإحصائية',t7:'المعايير العالمية للمراجعة الداخلية',
 p_p:'ست مراحل تتوزع عادةً بين جداول منفصلة ومجلدات مشتركة ورسائل بريد. AUDITool يديرها كمسار عمل واحد موحّد يمكن تتبّعه، ومربوط بالمعايير العالمية للمراجعة الداخلية الصادرة عن معهد المراجعين الداخليين (2024).',
 m3t:'تنفيذ المراجعة والتوثيق',m3d:'نفّذ برامج المراجعة، واسحب العينات، وحلّل البيانات. وتبقى كل ورقة عمل وكل دليل إثبات مرتبطة بمهمتها، مع مسار واضح للمراجعة والاعتماد.',
 g1:'المعايير العالمية · المعيار 9.4',g2:'المعايير العالمية · المعيار 13.2',g3:'المعايير العالمية · المبدأ 14',g4:'المعايير العالمية · المبدأ 14',g5:'المعايير العالمية · المعيار 15.2',g6:'المعايير العالمية · المعيار 15.1',
-w1t:'عربي في الأصل، لا ترجمة',w1d:'واجهتان عربية وإنجليزية بتخطيط سليم من اليمين إلى اليسار، ليعمل كل مراجع باللغة التي يكتب بها تقاريره.',
+w1t:'متاح بالعربية والإنجليزية',w1d:'واجهتان عربية وإنجليزية بتخطيط سليم من اليمين إلى اليسار، ليعمل كل مراجع باللغة التي يكتب بها تقاريره.',
 w2t:'ملفات Excel الحالية تنتقل معك',w2d:'ننقل خطط المراجعة وسجلات المخاطر والملاحظات الحالية إلى AUDITool أثناء التطبيق، فتبدأ ببياناتك أنت لا بنظام فارغ.',
 w3t:'العينات وتحليل البيانات من داخل النظام',w3d:'اسحب العينات وحلّل البيانات داخل المهمة نفسها، فيبقى الدليل والاستنتاج في ملف واحد.',
 w4t:'سعر واحد يشمل التطبيق',w4d:'الترخيص والتطبيق في عرض سعر واحد، دون مشروع استشاري منفصل قبل أن تبدأ.',
@@ -645,12 +677,14 @@ q4:'هل يتكامل مع نظام ERP أو Active Directory لدينا؟',a4:'
 q5:'هل يمكن تنفيذ العمل الميداني دون اتصال أو من الهاتف؟',a5:'ليس بعد. يعمل AUDITool من المتصفح على الحاسوب المكتبي أو المحمول، ويحتاج إلى اتصال بالإنترنت.',
 q6:'هل AUDITool حاصل على شهادة ISO 27001؟',a6:'ليس بعد. الضوابط المذكورة في قسم الأمان معمول بها اليوم، ونستعرضها بالتفصيل مع فريق تقنية المعلومات لديكم.',
 m1t:'تخطيط المراجعة المبني على المخاطر',m6t:'تقارير آلية ولوحات متابعة تفاعلية',m6d:'تُعدّ التقارير تلقائيًا من العمل المنجز داخل النظام، وتمنح لوحات المتابعة التفاعلية الإدارة العليا ولجنة المراجعة مؤشرات أداء لحظية عن التغطية والملاحظات المفتوحة وحالة الإجراءات.',xb1t:'هوية شركتك',xb1d:'خصّص AUDITool بهوية شركتك.',xb2t:'دليل استخدام شامل',xb2d:'دليل كامل يأخذ كل مستخدم في جولة على النظام خطوة بخطوة.',x_p:'مصمَّم للمراجعين الداخليين ومديري المراجعة ورؤساء المراجعة الداخلية.',
+u_eye:'أوائل المستخدمين',u_h:'شركات تستخدم AUDITool وتثق به.',u1:'القطاع الصناعي',u2:'قطاع التجزئة',u3:'قطاع التصنيع',
+ok_t:'تم طلب العرض التوضيحي بنجاح',ok_d:'شكرًا لك. سنرد خلال يوم عمل واحد لتحديد موعد يناسب فريقك.',
 wa:'تواصل عبر واتساب',next:'نرد خلال يوم عمل واحد لتحديد موعد يناسب فريقك.',
 foot:'AUDITool أحد منتجات <span dir="ltr">3D-Pi Integrated Solutions LLC</span>.',totop:'العودة إلى الأعلى'
 };
 var MSG={
-en:{need:'Please fill in your name, company, and a valid work email.',open:'Your email app should open with the request ready to send. If it does not, email hello@3d-pi.com or call +20 122 210 8577.',title:'AUDITool | Internal Audit Management System',wa:"Hello AUDITool team, I have an inquiry about AUDITool.",nav:'Primary',lang:'Language'},
-ar:{need:'يرجى إدخال الاسم والشركة وبريد إلكتروني صحيح للعمل.',open:'سيفتح تطبيق البريد لديك والطلب جاهز للإرسال. إن لم يفتح، راسلنا على hello@3d-pi.com أو اتصل على ‎+20 122 210 8577.',title:'AUDITool | نظام إدارة المراجعة الداخلية',wa:"مرحبًا فريق AUDITool، لديّ استفسار بخصوص AUDITool.",nav:'التنقل الرئيسي',lang:'اللغة'}
+en:{need:'Please fill in your name, company, and a valid work email.',sending:'Sending your request…',fail:'Something went wrong and the request was not sent. Please try again, or email hello@3d-pi.com or call +20 122 210 8577.',open:'Your email app should open with the request ready to send. If it does not, email hello@3d-pi.com or call +20 122 210 8577.',title:'AUDITool | Internal Audit Management System',wa:"Hello AUDITool team, I have an inquiry about AUDITool.",nav:'Primary',lang:'Language'},
+ar:{need:'يرجى إدخال الاسم والشركة وبريد إلكتروني صحيح للعمل.',sending:'جارٍ إرسال طلبك…',fail:'حدث خطأ ولم يُرسَل الطلب. يرجى المحاولة مرة أخرى، أو مراسلتنا على hello@3d-pi.com أو الاتصال على ‎+20 122 210 8577.',open:'سيفتح تطبيق البريد لديك والطلب جاهز للإرسال. إن لم يفتح، راسلنا على hello@3d-pi.com أو اتصل على ‎+20 122 210 8577.',title:'AUDITool | نظام إدارة المراجعة الداخلية',wa:"مرحبًا فريق AUDITool، لديّ استفسار بخصوص AUDITool.",nav:'التنقل الرئيسي',lang:'اللغة'}
 };
 var nodes=$$('[data-i]'),EN={};
 nodes.forEach(function(n){if(!(n.dataset.i in EN))EN[n.dataset.i]=n.innerHTML});
@@ -798,11 +832,16 @@ if(FINE&&!RM){
 /* ---------- demo form ---------- */
 $('#form').addEventListener('submit',function(e){
   e.preventDefault();
-  var f=e.target,v=function(n){return f.elements[n].value.trim()},st=$('#status');
+  var f=e.target,v=function(n){return f.elements[n].value.trim()},st=$('#status'),btn=$('button[type=submit]',f);
   if(!v('name')||!v('company')||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))){st.textContent=MSG[lang].need;return}
-  var body=['Name: '+v('name'),'Job title: '+v('title'),'Company: '+v('company'),'Sector: '+v('sector'),'Work email: '+v('email'),'Phone: '+v('phone')].join('\n');
-  st.textContent=MSG[lang].open;
-  try{location.href='mailto:hello@3d-pi.com?subject='+encodeURIComponent('AUDITool demo request: '+v('company'))+'&body='+encodeURIComponent(body)}catch(err){}
+  if(v('_honey'))return;
+  btn.disabled=true;st.textContent=MSG[lang].sending;
+  fetch('https://formsubmit.co/ajax/hello@3d-pi.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({
+    _subject:'AUDITool demo request: '+v('company'),_template:'table',_replyto:v('email'),_captcha:'false',
+    'Full name':v('name'),'Job title':v('title'),'Company':v('company'),'Sector':v('sector'),'Work email':v('email'),'Phone':v('phone'),'Page language':lang})})
+  .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)!=='true')throw 0})})
+  .then(function(){f.classList.add('sent');st.textContent='';$('#done').hidden=false;$('#done').focus()})
+  .catch(function(){btn.disabled=false;st.textContent=MSG[lang].fail});
 });
 
 if(saved==='ar')applyLang('ar');
